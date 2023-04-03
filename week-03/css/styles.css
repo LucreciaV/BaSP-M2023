@@ -1,0 +1,44 @@
+body {
+    font-family: sans-serif, Arial, Helvetica;
+    background-color: #FFFFFF;
+}
+
+header {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    margin-top: 0px;
+    text-align: center;
+    color: #FFFFFF;
+    background-color: #373867;
+    width: 100%;
+    height: 118px;
+}
+
+header p {
+    padding-top: 18px;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 47px;
+}
+
+aside {
+    height: 850px;
+    width: 335px;
+    left: 0px;
+    border-radius: 0px;
+    background-color: #F6F6F6;
+    position: fixed;
+    margin-top: 98px;
+    
+}
+
+#search {
+    margin-top: 16px;
+    height: 36px;
+    width: 255px;
+    margin-left: 40px;
+    margin-right: 40px;
+    border-radius: 4px;
+
+}
