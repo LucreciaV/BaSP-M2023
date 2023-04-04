@@ -1,6 +1,8 @@
 body {
     font-family: sans-serif, Arial, Helvetica;
     background-color: #FFFFFF;
+    max-width: 100vw;
+
 }
 
 header {
@@ -12,28 +14,28 @@ header {
     color: #FFFFFF;
     background-color: #373867;
     width: 100%;
-    height: 118px;
+    height: 104px;
 }
 
 header p {
     padding-top: 18px;
     font-size: 40px;
     font-weight: 700;
-    line-height: 47px;
+    line-height: 37px;
 }
-
 aside {
-    height: 850px;
-    width: 335px;
+    height: 680px;
+    width: 25%;
     left: 0px;
     border-radius: 0px;
     background-color: #F6F6F6;
     position: fixed;
-    margin-top: 98px;
+    top: 104px;
     
 }
 
 #search {
+    display:inline-table;
     margin-top: 16px;
     height: 36px;
     width: 255px;
@@ -41,4 +43,140 @@ aside {
     margin-right: 40px;
     border-radius: 4px;
 
+}
+
+main{
+    max-width: 25%;
+    margin-left: 25%;
+    background-color: aqua;
+ }
+
+
+#info{
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 23px;
+    letter-spacing: 0em;
+    margin-left: 50px;
+
+
+}
+
+#information {
+    display: inline-block;
+    width: 50%;
+}
+
+nav input{
+    color: #2A2A32;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 10px;
+    text-align: center;
+    display: inline-block;
+    background-color: #AACE9B;
+    height: 39px;
+    width: 190px;
+    border-radius: 10px;
+    border: 2px;
+}
+
+nav .buttons-container div{
+    padding: 0px 15px;
+    margin: 5px 0px;
+}
+
+nav img{
+    width: 35px;
+    height: 30px;
+}
+.nav{
+    vertical-align: middle;
+}
+
+h1{
+    text-align: center;
+    margin-left: 303px;
+    margin-right: 290px;
+    color: #373867;
+    font-weight: 500px;
+    font-size: 46px;
+    font-family: sans-serif;
+    margin-top: 122px;
+    max-width: 40px;
+}
+
+.gymroom{
+    width: 770px;
+    height: 278px;
+    margin-left: 400px;
+    margin-right: 150px;
+}
+
+h2{
+    text-align: center;
+    margin-left: 303px;
+    margin-right: 200px;
+    color: rgba(66, 60, 60, 1);
+    font: size 36px;
+    line-height: 42px;
+    font-weight: 700px;
+}
+
+.h2{
+    text-align: center;
+    margin-right: 240px;
+    margin-left: 400px;
+    color: rgba(119, 98, 98, 1);
+    font: size 20px;
+    line-height: 23px;
+    font-weight: 600px;
+
+}
+
+#about{
+    margin-left: 303px;
+    display: inline-block;
+    width: 25%;
+}
+
+#header-form{
+    margin-left: 500px;
+    margin-right: 300px;
+    display: inline-block;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 47px;
+    letter-spacing: 0em;
+    text-align: left;
+    color:rgba(55, 56, 103, 1) ;
+}
+
+form{
+    margin: auto;
+    margin-left: 303px;
+    width: 100%;
+    text-align: center;
+
+}
+
+.form-label{
+    display:block ;
+    margin: auto;
+}
+
+
+form button{
+    display: block;
+    margin: auto;
+}
+.radio-buttons-container{
+    max-width: 250px;
+
+}
+
+.about-rr{
+    margin: center
+    ;
 }

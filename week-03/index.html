@@ -14,36 +14,50 @@
     </header>    
     <aside>
         <section id="search">
-        <input type="text" placeholder="Search.." name="search">
-        <button>search</button>
+        <input type="text" placeholder="Search" name="search" >
+        <button><img src="../Assets/Images/search.jpg" alt="Search"></button>
         </section>
         <nav>
-            <ul>
-                <li>Home</li>
-                <li>Sign up</li>
-                <li>Sign in</li>
-                <li>Contact</li>
-            </ul>
+            <div class="buttons-container">
+                <div class="nav">
+                    <img src="../Assets/Images/icon-home.png" alt="home-icon">
+                    <input type="button"  value="Home">
+                </div>
+                <div class="nav">
+                    <img class="sign-up-button" src="../Assets/Images/Vectorsign up.jpg" alt="sign-up">
+                    <input type="button"  value="Sign up">
+                </div>
+                <div class="nav">
+                    <img src="../Assets/Images/icon-people.png" alt="icon-people">
+                    <input type="button" value="Sign in" >
+                </div>
+                <div class="nav">
+                    <img src="../Assets/Images/icon-inbox.png" alt="icon-inbox">
+                    <input  class="button" type="button" value="Contact">
+                </div>
+            </div>
         </nav>
-        <p>Information</p>
+        <section id="information">
+        <p id="info">Information</p>
         <ul>
-            <li><a href="https://radiumlearning.github.io/landing-example/index.html#" >information@untitled.tld </a></li>
-            <li>(000)000-000</li>
-            <li>1234 Somwhere Road #8254Nashville, TN 00000-0000</li>
+            <li><img src="../Assets/Images/icon-email.png" alt="letter-email"><a href="https://radiumlearning.github.io/landing-example/index.html#" >information@untitled.tld </a></li>
+            <li><img src="../Assets/Images/icon-phone.png" alt="icon-phone">(000)000-000</li>
+            <li><img src="../Assets/Images/icon-home.png" alt="icon-home">1234 Somwhere Road #8254Nashville, TN 00000-0000</li>
         </ul>
+        </section>
     </aside>
     <main>
-        <section>
+        <section id="Home">
             <h1>Hi, and welcome to Mega Rocket SA Gym</h1>
-            <img src="../Assets/Images/gym.png" alt="gym room">
+            <img class=gymroom src="../Assets/Images/gym.png" alt="gym room">
             <h2>A free and full responsive site template</h2>
-            <p>Aenean ornare velit lacus, ac varius enim ullamcorper eu. Proin aliquam facilisis ante interdum congue.
+            <p class="h2">Aenean ornare velit lacus, ac varius enim ullamcorper eu. Proin aliquam facilisis ante interdum congue.
             Integer mollis, nisl amet convallis, porttitor magna ullamcorper, amet egestas mauris.
             Ut magna finibus nisi nec lacinia. Nam maximus erat id euismod egestas. Pellentesque sapien ac quam.
             Lorem ipsum dolor sit nullam.
             </p>
         </section>
-        <section>
+        <section id="about">
             <h3>Appointment booking</h3>
             <img src="../Assets/Images/appointment.png" alt="calendar">
             <h3>Calendar and opening hours</h3>
@@ -52,35 +66,37 @@
             <img src="../Assets/Images/management.png" alt="membership cards">
             <h3>Contact form and suggestions</h3>
             <img src="../Assets/Images/contact.png" alt="form">
-            <h3>Registration and/or claim</h3>
         </section>
+        <h3 id="header-form">Registration and/or claim</h3>
         <form>
-            <label>Name</label>
-            <input type="text" name="first name">
-            <label>Last Name</label>
-            <input type="text" name="Last name">
-            <label>Email</label>
-            <input type="text" Email="Email">
+            <label class="form-label">Name</label>
+            <input class="form-label" type="text" name="first name">
+            <label class="form-label">Last Name</label>
+            <input class="form-label" type="text" name="Last name">
+            <label class="form-label">Email</label>
+            <input class="form-label" type="text" Email="Email">
+            <div class="radio-buttons-container">
             <input type="radio" id="know-details">
             <label for="know-details">I want to know memberships and costs</label>
             <input type="radio" id="make-question/suggestion">
             <label for="make-question/suggestion">I want to make a question or suggestion</label>
             <input type="radio" id="make-claim">
             <label for="make-claim">I want to make a claim</label>
-            <label>Comments</label>
+            </div>
+            <label class="form-label">Comments</label>
             <input type="text" name="Comments">
             <button>Send</button>
             <button>Cancel</button>
         </form>
         <section>
-            <h3>About us</h3>
+            <h3 class="about-rr">About us</h3>
             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
                     Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when 
                     an unknown printer took a galley of type and scrambled it to make a type specimen book.
             </p>
         </section>
         <section>
-            <h3>Activities</h3>
+            <h3 class="">Activities</h3>
             <img src="../Assets/Images/Crossfit.png" alt="Crossfit">
             <h3>Crossfit</h3>
             <img src="../Assets/Images/Functional.png" alt="Functional">
