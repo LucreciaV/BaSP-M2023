@@ -57,36 +57,55 @@
             Lorem ipsum dolor sit nullam.
             </p>
         </section>
-        <section id="about">
-            <h3>Appointment booking</h3>
-            <img src="../Assets/Images/appointment.png" alt="calendar">
-            <h3>Calendar and opening hours</h3>
-            <img src="../Assets/Images/calendar.png" alt="calendar">
-            <h3>Management and membership</h3>
-            <img src="../Assets/Images/management.png" alt="membership cards">
-            <h3>Contact form and suggestions</h3>
-            <img src="../Assets/Images/contact.png" alt="form">
+        <section>
+            <article id="about">
+                <img src="../Assets/Images/appointment.png" alt="calendar">
+                <h3>Appointment booking</h3>
+                <p>Aenean ornare velit lacus, ac varius enim ullamcorper eu.
+                     Proin aliquam facilisis ante interdum congue.
+                </p>
+            </article>
+            <article id="about">
+                <img src="../Assets/Images/calendar.png" alt="calendar">
+                <h3>Calendar and opening hours</h3>
+                <p>Aenean ornare velit lacus, ac varius enim ullamcorper eu.
+                    Proin aliquam facilisis ante interdum congue.
+               </p>
+            </article>
+            <article id="about">
+                <img src="../Assets/Images/management.png" alt="membership cards">
+                <h3>Management and membership</h3>
+                <p>Aenean ornare velit lacus, ac varius enim ullamcorper eu.
+                    Proin aliquam facilisis ante interdum congue.
+               </p>
+            </article>
+            <article id="about"> 
+                <img src="../Assets/Images/contact.png" alt="form">
+                <h3>Contact form and suggestions</h3>
+                <p>Aenean ornare velit lacus, ac varius enim ullamcorper eu.
+                    Proin aliquam facilisis ante interdum congue.
+               </p>
+            </article>  
         </section>
         <h3 id="header-form">Registration and/or claim</h3>
         <form>
             <label class="form-label">Name</label>
-            <input class="form-label" type="text" name="first name">
+            <input class="form-label" id="input-form" type="text" name="first name">
             <label class="form-label">Last Name</label>
-            <input class="form-label" type="text" name="Last name">
+            <input class="form-label" id="input-form" type="text" name="Last name">
             <label class="form-label">Email</label>
-            <input class="form-label" type="text" Email="Email">
+            <input class="form-label" id="input-form" type="text" Email="Email">
             <div class="radio-buttons-container">
-            <input type="radio" id="know-details">
+            <input type="radio" id="choose">
             <label for="know-details">I want to know memberships and costs</label>
-            <input type="radio" id="make-question/suggestion">
+            <input type="radio" id="choose">
             <label for="make-question/suggestion">I want to make a question or suggestion</label>
-            <input type="radio" id="make-claim">
+            <input type="radio" id="choose">
             <label for="make-claim">I want to make a claim</label>
             </div>
-            <label class="form-label">Comments</label>
-            <input type="text" name="Comments">
-            <button>Send</button>
-            <button>Cancel</button>
+            <label class="form-label" id="comments-text">Comments</label>
+            <input id="input-comments"type="text" name="Comments">
+            <button class="button-send">Send</button>
         </form>
         <section>
             <h3 class="about-rr">About us</h3>
@@ -97,33 +116,43 @@
         </section>
         <section>
             <h3 class="activities">Activities</h3>
-            <img src="../Assets/Images/Crossfit.png" alt="Crossfit">
-            <h3>Crossfit</h3>
-            <img src="../Assets/Images/Functional.png" alt="Functional">
-            <h3>Functional</h3>
-            <img src="../Assets/Images/Boxing.png" alt="Boxing">
-            <h3>Boxing</h3>
-            <img src="../Assets/Images/Spinning.png" alt="Spinning">
-            <h3>Spinning</h3>
-            <img src="../Assets/Images/Fitness.png" alt="Fitness">
-            <h3>Fitness</h3>
+            <article id="activities-view">
+                <img src="../Assets/Images/Crossfit.png" alt="Crossfit">
+                <h3>Crossfit</h3>
+            </article>
+            <article id="activities-view">
+                <img src="../Assets/Images/Functional.png" alt="Functional">
+                <h3>Functional</h3>
+            </article>
+            <article id="activities-view">
+                <img src="../Assets/Images/Boxing.png" alt="Boxing">
+                <h3>Boxing</h3>
+            </article>
+            <article id="activities-view">
+                <img src="../Assets/Images/Spinning.png" alt="Spinning">
+                <h3>Spinning</h3>
+            </article>
+            <article id="activities-view">
+                <img src="../Assets/Images/Fitness.png" alt="Fitness">
+                <h3>Fitness</h3>
+            </article>
         </section>
-        <section>
-            <h3>Membership Black</h3>
-            <ul>
+        <section class="membership-types">
+            <h3 class="membership-black">Membership Black</h3>
+            <ul class="membership">
                 <li>Free access to Bodybuilding</li>
                 <li>Free access to classes prior registration</li>
                 <li>Follow-up analyzed by coach</li>
                 <li>Grid display</li>
             </ul>
-            <h3>Membership Classic</h3>
-            <ul>
+            <h3 class="membership-classic">Membership Classic</h3>
+            <ul class="membership">
                 <li>Free access to the weight room</li>
                 <li>Personalized monitoring by a coach</li>
                 <li>Grid display</li>
             </ul>
-           <h3>Membership Only Classes</h3>
-            <ul>
+           <h3 class="membership-oclasses">Membership Only Classes</h3>
+            <ul class="membership">
                 <li>Personalized monitoring by a coach</li>
                 <li>Grid display</li>
             </ul>

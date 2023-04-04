@@ -43,7 +43,6 @@ aside {
     margin-left: 40px;
     margin-right: 40px;
     border-radius: 4px;
-
 }
 
 main{
@@ -94,6 +93,7 @@ nav img{
 
 h1{
     text-align: center;
+    margin-left: 303px;
     color: #373867;
     font-weight: 500px;
     font-size: 46px;
@@ -103,35 +103,41 @@ h1{
 }
 
 .gymroom{
+    display: block;
+    text-align: center;
+    margin-left: 100px;
     width: 770px;
     height: 278px;
 }
 
 h2{
-    text-align: center;
+   
+ text-align: center;
     color: rgba(66, 60, 60, 1);
-    font: size 36px;
+    font-size: 36px;
     line-height: 42px;
     font-weight: 700px;
 }
 
 .h2{
+    Width: 712px;
+    Height: 239.42px;
+    margin-left: 100px;
+    margin-right: 100px;
     text-align: center;
     color: rgba(119, 98, 98, 1);
-    font: size 20px;
+    font-size: 20px;
     line-height: 23px;
     font-weight: 600px;
-
 }
 
 #about{
+
     display: inline-block;
-    width: 25%;
+    width: 37%;
 }
 
 #header-form{
-    margin-left: 500px;
-    margin-right: 300px;
     display: inline-block;
     text-align: center;
     font-size: 40px;
@@ -143,8 +149,11 @@ h2{
 }
 
 form{
+    font-size: 16px;
+    font-weight: 550;
+    line-height: 15px;
+    letter-spacing: 0em;
     margin: auto;
-    margin-left: 303px;
     text-align: center;
 }
 
@@ -153,16 +162,47 @@ form{
     margin: auto;
 }
 
+#input-form{
+    background-color:  rgba(217, 217, 217, 1);
+    height: 43px;
+    width: 386px;
+    border-radius: 1px;
+    border: 0px;
+}
+
+#input-comments{
+    background-color: #FFFFFF;
+    border: 0px;
+    height: 171px;
+    width: 364px;
+    left: 692px;
+    top: 2419px;
+    border-radius: 1px;
+    outline-color: #2a2a320a;
+    border-bottom:#2a2a3256
+}
 
 form button{
     display: block;
     margin: auto;
 }
 .radio-buttons-container{
-    max-width: 250px;
+    display: block;
 
 }
 
+.button-send{
+    background-color: #AACE9B;
+    font-size: 16px;
+    border: 2px;
+    height: 33px;
+    width: 109px;
+    left: 820px;
+    top: 2610px;
+    border-radius: 5px;
+    font-weight: 700;
+
+}
 .about-rr{
     text-align: center;
     font-size: 40px;
@@ -171,13 +211,90 @@ form button{
 }
 
 .about-p{
-    text-align: center;
+    height: 213px;
+    width: 604px;
+    left: 487px;
+    border-radius: 5px;
     color: Grayish Navy - Primary color;
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 400;
     line-height: 30px;
-    text-align: center;
-    width: 650px;
+    width: 590px;
     margin: 20px;
-    background-color: rgba(170, 206, 155, 0.219);
+    background-color: rgba(170, 206, 155, 0.068);
+    padding-top: 75px;
+    padding-left: 60px;
+    padding-right: 35px;
+    padding-bottom: 2px;
 }
+
+.activities{
+    color: #373867;
+    font-size: 36px;
+    line-height: 100%;
+    text-align: center;
+}
+
+#activities-view{
+    display: inline-block;
+
+}
+
+.membership-black{
+    color: #FFFFFF;
+    font-size: 18px;
+    padding-top: 10px;
+    border-radius: nullpx;
+    background-color: rgba(42, 42, 50, 1);
+    text-align: center;
+    height: 32px;
+    width: 250px;
+    border-radius: 5px;
+}
+
+.membership-types{
+    display: block;
+    text-align: center;
+}
+
+.membership-classic{
+    color:rgba(0, 0, 0, 1);
+    font-size: 18px;
+    padding-top: 10px;
+    border-radius: nullpx;
+    background-color:rgba(204, 203, 203, 1);
+    text-align: center;
+    height: 32px;
+    width: 250px;
+    border-radius: 5px;
+}
+
+.membership-oclasses{
+    color: rgba(0, 0, 0, 1);
+    font-size: 18px;
+    padding-top: 10px;
+    border-radius: nullpx;
+    background-color:rgba(237, 237, 237, 1);
+    text-align: center;
+    height: 32px;
+    width: 250px;
+    border-radius: 5px;
+}
+
+.membership{
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19px;
+    letter-spacing: 0em;
+    color: rgba(0, 0, 0, 1);
+
+}
+
+footer{
+    text-align: center;
+}
+
+
+
+
