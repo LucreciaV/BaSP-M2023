@@ -13,3 +13,13 @@ Welcome to my project! this the landing page on html for Mega Rocket SA Gym. it'
 3-Know the actvities and the memberships.
 
 4- If you have any doubt, suggestion or want to buy any membership fill the form with your full name and email and they will contact you.
+
+---
+---
+
+# Styles for my landing page:
+
+
+## Description: 
+This is the landing page on CSS for Mega Rocket SA Gym, here we are using the styles without flex box, trying to immitate the template that we use on the first week, based on the resolution of my desktop.
+I also corrected the html file for a better visibility.
