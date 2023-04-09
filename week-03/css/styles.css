@@ -2,7 +2,6 @@ body {
     font-family:'Roboto', sans-serif;
     background-color: #FFFFFF;
     max-width: 100vw;
-
 }
 
 header {
@@ -83,7 +82,6 @@ main{
     display: inline-block;
     width: 50%;
 }
-
 
 nav input{
     display: inline-block;
@@ -310,7 +308,6 @@ form button{
     line-height: 30px;
     margin-bottom: 220px;
 }
-
 
 .activities{
     text-align: center;
