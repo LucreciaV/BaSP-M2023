@@ -1,6 +1,7 @@
-header{
-    align-self: flex-end;
+header { 
+    display: flex;
     justify-content: center;
+    display: none;
     left: 0px;
     top: 0px;
     margin-top: 0px;

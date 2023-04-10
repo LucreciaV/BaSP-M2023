@@ -9,43 +9,50 @@
     <link rel="stylesheet" type="text/css" href="css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/side-bar.css">
+    <link rel="stylesheet" href="./css/content.css">
 </head>
 <body>
     <header>
         <p>Mega Rocket SA</p>
     </header>    
     <aside>
-        <section id="search">
-        <input type="text" placeholder="Search" name="search" >
-        <button><img src="../Assets/Images/search.jpg" alt="Search"></button>
-        </section>
-        <nav>
-            <div class="buttons-container">
-                <div class="nav">
-                    <img class="img-nav" src="../Assets/Images/icon-home.png" alt="home-icon">
-                    <input type="button"  value="Home">
+        <div id="menu-hamburguer">
+            <img src="../Assets/Images/menu ham.png" alt="menu">
+        </div>
+        <section id="all-aside">
+            <section id="search">
+            <input type="text" placeholder="Search" name="search" >
+            <button><img src="../Assets/Images/search.jpg" alt="Search"></button>
+            </section>
+            <nav>
+                <div class="buttons-container">
+                    <div class="nav">
+                        <img class="img-nav" src="../Assets/Images/icon-home.png" alt="home-icon">
+                        <input type="button"  value="Home">
+                    </div>
+                    <div class="nav">
+                        <img class="img-nav" src="../Assets/Images/Vectorsign up.jpg" alt="sign-up">
+                        <input type="button"  value="Sign up">
+                    </div>
+                    <div class="nav">
+                        <img class="img-nav" src="../Assets/Images/icon-people.png" alt="icon-people">
+                        <input type="button" value="Sign in" >
+                    </div>
+                    <div class="nav">
+                        <img class="img-nav" src="../Assets/Images/icon-inbox.png" alt="icon-inbox">
+                        <input  class="button" type="button" value="Contact">
+                    </div>
                 </div>
-                <div class="nav">
-                    <img class="img-nav" src="../Assets/Images/Vectorsign up.jpg" alt="sign-up">
-                    <input type="button"  value="Sign up">
-                </div>
-                <div class="nav">
-                    <img class="img-nav" src="../Assets/Images/icon-people.png" alt="icon-people">
-                    <input type="button" value="Sign in" >
-                </div>
-                <div class="nav">
-                    <img class="img-nav" src="../Assets/Images/icon-inbox.png" alt="icon-inbox">
-                    <input  class="button" type="button" value="Contact">
-                </div>
-            </div>
-        </nav>
-        <section id="information">
-        <p id="info">Information</p>
-        <ul class="list-info">
-            <li><img src="../Assets/Images/icon-email.png" alt="letter-email"><a href="https://radiumlearning.github.io/landing-example/index.html#" >information@untitled.tld </a></li>
-            <li><img src="../Assets/Images/icon-phone.png" alt="icon-phone">(000)000-000</li>
-            <li><img src="../Assets/Images/icon-home.png" alt="icon-home">1234 Somwhere Road #8254Nashville, TN 00000-0000</li>
-        </ul>
+            </nav>
+            <section id="information">
+            <p id="info">Information</p>
+            <ul class="list-info">
+                <li><img src="../Assets/Images/icon-email.png" alt="letter-email"><a href="https://radiumlearning.github.io/landing-example/index.html#" >information@untitled.tld </a></li>
+                <li><img src="../Assets/Images/icon-phone.png" alt="icon-phone">(000)000-000</li>
+                <li><img src="../Assets/Images/icon-home.png" alt="icon-home">1234 Somwhere Road #8254Nashville, TN 00000-0000</li>
+            </ul>
+            </section>
         </section>
     </aside>
     <main>
@@ -89,32 +96,34 @@
                </p>
             </article>  
         </section>
-        <h3 id="header-form">Registration and / or claim</h3>
-        <form>
-            <label class="form-label">Name</label>
-            <input class="form-label" id="input-form" type="text" name="first name">
-            <label class="form-label">Last Name</label>
-            <input class="form-label" id="input-form" type="text" name="Last name">
-            <label class="form-label">Email</label>
-            <input class="form-label" id="input-form" type="text" Email="Email">
-            <div class="radio-buttons-container">
-                <div>
-                    <input type="radio">
-                    <label for="know-details">I want to know memberships and costs</label>
+        <section>
+            <h3 id="header-form">Registration and / or claim</h3>
+            <form>
+                <label class="form-label">Name</label>
+                <input class="form-label" id="input-form" type="text" name="first name">
+                <label class="form-label">Last Name</label>
+                <input class="form-label" id="input-form" type="text" name="Last name">
+                <label class="form-label">Email</label>
+                <input class="form-label" id="input-form" type="text" Email="Email">
+                <div class="radio-buttons-container">
+                    <div>
+                        <input type="radio">
+                        <label for="know-details">I want to know memberships and costs</label>
+                    </div>
+                    <div>
+                        <input type="radio">
+                        <label for="make-question/suggestion">I want to make a question or suggestion</label>
+                    </div>
+                    <div>
+                        <input type="radio">
+                        <label for="make-claim">I want to make a claim</label>
+                    </div>
                 </div>
-                <div>
-                    <input type="radio">
-                    <label for="make-question/suggestion">I want to make a question or suggestion</label>
-                </div>
-                <div>
-                    <input type="radio">
-                    <label for="make-claim">I want to make a claim</label>
-                </div>
-            </div>
-            <label class="form-label" id="comments-text">Comments</label>
-            <input id="input-comments"type="text" name="Comments">
-            <button class="button-send">Send</button>
-        </form>
+                <label class="form-label" id="comments-text">Comments</label>
+                <input id="input-comments"type="text" name="Comments">
+                <button class="button-send">Send</button>
+            </form>
+        </section>
         <section>
             <h3 class="about-rr">About us</h3>
             <p class="about-p">Lorem Ipsum is simply dummy text of the printing and typesetting industry. 

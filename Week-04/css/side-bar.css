@@ -1,0 +1,35 @@
+#menu-hamburguer {
+    width: 15%;
+}
+#all-aside {
+    display: flex;
+    display: none;
+    height: 680px;
+    width: 25%;
+    left: 0px;
+    border-radius: 0px;
+    background-color: #F6F6F6;
+    position: fixed;
+    top: 104px;
+}
+
+#search {
+    display:inline-table;
+    margin-top: 16px;
+    height: 36px;
+    width: 255px;
+    margin-left: 40px;
+    margin-right: 40px;
+    border-radius: 4px;
+}
+
+.img-nav {
+    margin-bottom: 8px;
+    height: 29px;
+    width: 36px;
+    border-radius: 0px;
+}
+
+.list-info {
+    list-style-type: none;
+}
