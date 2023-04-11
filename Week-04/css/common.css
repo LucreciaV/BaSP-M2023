@@ -1,0 +1,29 @@
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+ }
+
+h1{
+    max-width: 90%;
+    text-align: center;
+} 
+.flex {
+    display: flex;
+  }
+  
+  .flex-column {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .center {
+    justify-content: center;
+    align-items: center;
+  }
+
+  body{ 
+    width: 100vw;
+  }
