@@ -18,7 +18,7 @@
     </header>    
     <aside>
         <div id="menu-hamburguer">
-            <img src="../Assets/Images/menu ham.png" alt="menu">
+            <img class="img-hamburger" src="../Assets/Images/menu ham.png" alt="menu">
         </div>
         <section id="all-aside">
             <section id="search">
@@ -56,9 +56,11 @@
         </section>
     </aside>
     <main>
-        <section id="Home">
-            <h1>Hi, and welcome to Mega Rocket SA Gym</h1>
-            <img class=gymroom src="../Assets/Images/gym.png" alt="gym room">
+        <section id="home">
+            <div class="home-img">
+                <h1>Hi, and welcome to Mega Rocket SA Gym</h1>
+                <img class=gymroom src="../Assets/Images/gym.png" alt="gym room">
+            </div>
             <h2>A free and full responsive site template</h2>
             <p class="h2">Aenean ornare velit lacus, ac varius enim ullamcorper eu. Proin aliquam facilisis ante interdum congue.
             Integer mollis, nisl amet convallis, porttitor magna ullamcorper, amet egestas mauris.
@@ -69,10 +71,12 @@
         <section>
             <article id="about">
                 <img id="img-about" src="../Assets/Images/appointment.png" alt="calendar">
-                <h3 id="heading-about">Appointment booking</h3>
-                <p id="paragraph-about">Aenean ornare velit lacus, ac varius enim ullamcorper eu.
-                     Proin aliquam facilisis ante interdum congue.
-                </p>
+                <div class="flex-colum"></div>
+                    <h3 id="heading-about">Appointment booking</h3>
+                    <p id="paragraph-about">Aenean ornare velit lacus, ac varius enim ullamcorper eu.
+                        Proin aliquam facilisis ante interdum congue.
+                    </p>
+                </div>
             </article>
             <article id="about">
                 <img id="img-about" src="../Assets/Images/calendar.png" alt="calendar">
@@ -124,7 +128,7 @@
                 <button class="button-send">Send</button>
             </form>
         </section>
-        <section>
+        <section class="about">
             <h3 class="about-rr">About us</h3>
             <p class="about-p">Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
                     Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when 
