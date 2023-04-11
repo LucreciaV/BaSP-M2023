@@ -1,15 +1,28 @@
+aside{
+    display: flex;
+}
+
 #all-aside {
     display: flex;
     display: none;
-    height: 680px;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    flex-grow: 1;
+    height: 100%;
     width: 25%;
     left: 0px;
     border-radius: 0px;
     background-color: #F6F6F6;
     position: fixed;
     top: 104px;
+    flex-grow: 1;
 }
 
+.buttons-container{
+    margin-bottom: 40px;
+    
+}
 #menu-hamburguer{
     position: fixed;
 }
@@ -24,13 +37,63 @@
     border-radius: 4px;
 }
 
+.nav{
+    display: flex;
+    flex-direction: row;
+}
+
+nav input{
+    display: inline-block;
+    margin-left: 25px;
+    color: #2A2A32;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 10px;
+    text-align: center;
+    margin-bottom: 5px;
+    background-color: #AACE9B;
+    height: 39px;
+    width: 229px;
+    border-radius: 10px;
+    border: 2px;
+}
+
 .img-nav {
-    margin-bottom: 8px;
-    height: 29px;
-    width: 36px;
-    border-radius: 0px;
+    width: 20%;
+    height: 20%;
+    object-fit: contain;
 }
 
 .list-info {
     list-style-type: none;
+    max-width: 60%;
+    justify-content: flex-start;
+}
+
+.list-info li{
+   display: flex;
+   justify-content: flex-start;
+}
+
+.contact{
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.img-contact{
+    width: 10%;
+    height: 10%;
+    object-fit: contain;
+}
+
+@media screen and (min-width: 1024px){
+    #all-aside {
+        display: flex;
+       }
+
+    #menu-haburguer{
+        display: none;
+    }
+
+
 }

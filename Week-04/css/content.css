@@ -14,6 +14,7 @@ h1{
 
 }
 
+
 h2{
     color: rgba(0, 0, 0, 1); 
     font-family: Roboto;
@@ -75,15 +76,10 @@ h2{
 }
 
 #header-form{
-    display: flex;
-    justify-content: center;
-    max-width: 90%;
     margin-top: 150px;
-    background-color: rgba(170, 206, 155, 1);
     text-align: center;
     padding: 5px 5px;
     height: 59px;
-    width: 202px;
     left: 85px;
     top: 2287px;
     border-radius: 10px;
@@ -198,34 +194,111 @@ form button{
 }
 
 .activities{
-    margin-left: 65px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    margin-top: 30px;
     text-align: center;
+    width: 60%;
+    margin: auto;
+    padding: 20px 40px;
     background: rgba(170, 206, 155, 1);
-    height: 51px;
-    width: 158px;
     border-radius: 10px;
+    margin-bottom: 15px;
 }
 
-#activities-view{
+.section-activities{
+    margin-top: 10px;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.section-activities article{
+    gap: 10px;
+}
+
+.img-activities{
+    width: 200px;
+    height: 230px;
+    object-fit: contain;
+    border-radius: 5px;
+}
+
+.membership-types{
     display: flex;
-    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#membership-head{
     text-align: center;
-    margin-bottom: 60px;
+    font-size: 18px;
+    padding-top: 10px;
+    border-radius: nullpx;
+    height: 32px;
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 25px;
+ }
+
+ .membership{
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 30px;
+    width: 75%;
+    letter-spacing: 0,8em;
+    color: rgba(0, 0, 0, 1);
+    margin-bottom: 40px;
+    list-style-type: none;
 }
 
-#img-activities{
-    width: 70%;
-    height: 70%;
-    object-fit: contain
+ .membership-black{
+    margin-top: 150px;
+    color: #FFFFFF;
+    background-color: rgba(42, 42, 50, 1);
 }
 
+.membership-classic{
+    color:rgba(0, 0, 0, 1);
+    background-color:rgba(204, 203, 203, 1);
+}
 
+.membership-oclasses{
+    color: rgba(0, 0, 0, 1);
+    background-color:rgba(237, 237, 237, 1);
+}
 
+#logorr{
+    display: flex;
+}
 
+#icon{
+    margin: 20px;
+    flex: auto;
+    width: 25%;
+    height: 25%;
+    object-fit: contain;
+    min-width: 80px;
+}
 
+#p-footer{
+    max-width: 80%;
+}
 
-
-
+@media screen and (min-width: 1024px){
+    .paragraph-about{
+        display: flex;
+    }
+    .home-img{ 
+        order: -1;
+    }
+    #logorr{
+        position: fixed;
+        justify-content: flex-end
+    }
+    main{
+        margin-left: 25%;
+    }
+    footer{
+        margin-left: 25%;
+    }
+}

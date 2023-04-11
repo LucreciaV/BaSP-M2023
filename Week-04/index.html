@@ -45,12 +45,21 @@
                     </div>
                 </div>
             </nav>
-            <section id="information">
+            <section class="flex-column" id="information">
             <p id="info">Information</p>
-            <ul class="list-info">
-                <li><img src="../Assets/Images/icon-email.png" alt="letter-email"><a href="https://radiumlearning.github.io/landing-example/index.html#" >information@untitled.tld </a></li>
-                <li><img src="../Assets/Images/icon-phone.png" alt="icon-phone">(000)000-000</li>
-                <li><img src="../Assets/Images/icon-home.png" alt="icon-home">1234 Somwhere Road #8254Nashville, TN 00000-0000</li>
+            <ul class="flex-column list-info">
+                <li class="contact">
+                    <a href="https://radiumlearning.github.io/landing-example/index.html#" >information@untitled.tld </a>
+                    <img class="img-contact" src="../Assets/Images/icon-email.png" alt="letter-email">
+                </li>
+                <li class="contact">
+                    <p>(000)000-000</p>
+                    <img class="img-contact" src="../Assets/Images/icon-phone.png" alt="icon-phone">
+                </li>
+                <li class="contact">
+                    <p>1234 Somwhere Road #8254Nashville, TN 00000-0000</p>
+                    <img class="img-contact" src="../Assets/Images/icon-home.png" alt="icon-home">
+                </li>
             </ul>
             </section>
         </section>
@@ -116,7 +125,7 @@
                 </div>
             </article>  
         </section>
-        <section>
+        <section class="flex-column center">
             <h3 id="header-form">Registration and / or claim</h3>
             <form>
                 <label class="form-label">Name</label>
@@ -151,34 +160,38 @@
                     an unknown printer took a galley of type and scrambled it to make a type specimen book.
             </p>
         </section>
-        <section class="section-activities">
+        <section class="flex-column center">
             <h3 class="activities">Activities</h3>
-            <article id="activities-view">
-                <img id="img-activities" src="../Assets/Images/Crossfit.png" alt="Crossfit">
-                <h3 id="heading-activities">Crossfit</h3>
-            </article>
-            <article id="activities-view">
-                <img id="img-activities" src="../Assets/Images/Functional.png" alt="Functional">
-                <h3 id="heading-activities">Functional</h3>
-            </article>
-            <article id="activities-view">
-                <img id="img-activities" src="../Assets/Images/Boxing.png" alt="Boxing">
-                <h3 id="heading-activities">Boxing</h3>
-            </article>
-            <article id="activities-view">
-                <img id="img-activities" src="../Assets/Images/Spinning.png" alt="Spinning">
-                <h3 id="heading-activities">Spinning</h3>
-            </article>
-            <article id="activities-view">
-                <img id="img-activities" src="../Assets/Images/Fitness.png" alt="Fitness">
-                <h3 id="heading-activities">Fitness</h3>
-            </article>
+            <div class="flex-column center section-activities">
+                <article class="flex center" id="img-header">
+                    <img class="img-activities" src="../Assets/Images/Crossfit.png" alt="Crossfit">
+                    <h3 id="heading-activities">Crossfit</h3>
+                </article>
+                <article class="flex center" id="img-header">
+                    <img class="img-activities" src="../Assets/Images/Functional.png" alt="Functional">
+                    <h3 id="heading-activities">Functional</h3>
+                </article>
+                <article class="flex center" id="img-header">
+                    <img class="img-activities" src="../Assets/Images/Boxing.png" alt="Boxing">
+                    <h3 id="heading-activities">Boxing</h3>
+                </article>
+                <article class="flex center" id="img-header">
+                    <img class="img-activities" src="../Assets/Images/Spinning.png" alt="Spinning">
+                    <h3 id="heading-activities">Spinning</h3>
+                </article>
+                <article class="flex center" id="img-header">
+                    <img class="img-activities" src="../Assets/Images/Fitness.png" alt="Fitness">
+                    <h3 id="heading-activities">Fitness</h3>
+                </article>
+            </div>
         </section>
         <section class="membership-types">
             <h3 id="membership-head" class="membership-black">Membership Black</h3>
             <ul class="membership">
                 <li>Free access to Bodybuilding</li>
-                <li>Free access to classes prior registration</li>
+                <li>Free access to classes prior
+                     registration
+                </li>
                 <li>Follow-up analyzed by coach</li>
                 <li>Grid display</li>
             </ul>
@@ -196,16 +209,16 @@
         </section>
     </main>
     <footer>
-        <nav>
-            <a href="https://www.snapchat.com/es-ES"><img id="icon" src="../Assets/Images/SnapchatSnapchat.png" alt="snapchat"></a>
-            <a href="https://www.whatsapp.com/"><img id="icon" src="../Assets/Images/WhatsAppWhatsApp.png" alt="whatsapp"></a>
-            <a href="https://www.facebook.com/"><img id="icon" src="../Assets/Images/FacebookFacebook.png" alt="facebook"></a>
-            <a href="https://www.instagram.com/"><img id="icon" src="../Assets/Images/InstagramInstagram.png" alt="instagram"></a>
-            <a href="https://web.telegram.org/k/"><img id="icon" src="../Assets/Images/TelegramTelegram.png" alt="telegram"></a>
-            <a href="https://www.linkedin.com/"><img id="icon" src="../Assets/Images/LinkedIn - OriginalLinkedin.png" alt="LinkedIn"></a>
+        <div>
+                <a href="https://www.snapchat.com/es-ES"><img id="icon" src="../Assets/Images/SnapchatSnapchat.png" alt="snapchat"></a>
+                <a href="https://www.whatsapp.com/"><img id="icon" src="../Assets/Images/WhatsAppWhatsApp.png" alt="whatsapp"></a>
+                <a href="https://www.facebook.com/"><img id="icon" src="../Assets/Images/FacebookFacebook.png" alt="facebook"></a>
+                <a href="https://www.instagram.com/"><img id="icon" src="../Assets/Images/InstagramInstagram.png" alt="instagram"></a>
+                <a href="https://web.telegram.org/k/"><img id="icon" src="../Assets/Images/TelegramTelegram.png" alt="telegram"></a>
+                <a href="https://www.linkedin.com/"><img id="icon" src="../Assets/Images/LinkedIn - OriginalLinkedin.png" alt="LinkedIn"></a>
+         </div>
             <p id="p-footer">Rosario, Argentina. Copyright © 2022 Radium Rocket. All rights reserved.</p>
             <a><img id="logorr" src="../Assets/Images/LOGO-RR 3.png" alt="LOGO-RR"></a>
-        </nav>
     </footer>
 </body>
 </html>
