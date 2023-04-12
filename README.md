@@ -1,4 +1,4 @@
-<em># Landing page on desktop for Mega Rocket SA</em>
+<em>  Landing page on desktop for Mega Rocket SA </em>
 ---
 ## Description:
 Welcome to my project! this the landing page on html for Mega Rocket SA Gym. it's the desktop version. It´s made for the users of the gym, the gym teachers and the super admins. Here you will see the information of the gym, a contact, the memberships and activities. It allows you to make the registration, have acces to a membership or to clear any doubt. 
@@ -23,3 +23,15 @@ Welcome to my project! this the landing page on html for Mega Rocket SA Gym. it'
 ## Description: 
 This is the landing page on CSS for Mega Rocket SA Gym, here we are using the styles without flex box, trying to immitate the template that we use on the first week, based on the resolution of my desktop.
 I also corrected the html file for a better visibility.
+
+---
+---
+
+## Week 04:
+
+```python
+During this week we had to replicate the web page from the first week, we used responsive design, according to mobile first and then we did the responsive for tablet and desktop adding flexbox and media query in case we needed to use it.
+
+I had to modify some code on html to make the responsive. 
+
+It help me a lot to watch and modify the inspection from the browser.
