@@ -43,6 +43,12 @@ h2{
     width: 100%;
 }
 
+.gymroom{
+    width: 90%;
+    height: 70%;
+    border-radius: 5px;
+}
+
 .home-img img{
     margin-top: 109px;
     width: 90%;
@@ -55,6 +61,10 @@ h2{
     margin-bottom: 150px;
 }
 
+.about-container{
+    width: 85%;
+
+}
 .about{
     max-width: 90%;
     text-align: center;
@@ -284,20 +294,80 @@ form button{
     max-width: 80%;
 }
 
+@media screen and (min-width: 600px){
+    #home {
+        flex-direction: column-reverse;
+    }
+    .home-img{
+        margin-top: 0px;
+        margin-bottom: 100px;
+    }
+    .free-full{
+        margin-bottom: 0px;
+    }
+    .about{
+        margin-bottom: 45px;
+    }
+   .form-container{
+        width: 90vw;
+    }
+    .img-activities{
+        width: 300px;
+        height: 360px;
+    }
+    .section-activities article{
+        flex-direction: column;
+    }
+    .membership-types{
+        width: 70%;
+        margin-bottom: 50px;
+    }
+    #icon{
+        margin: 10px;
+        width: 25%;
+    }
+}
+
 @media screen and (min-width: 1024px){
+    main{
+        margin-left: 25%;
+    }
+    h1{
+        margin-top: 150px;
+    }
     .paragraph-about{
         display: flex;
     }
+    .about-container{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 80%;
+    }
+    
     .home-img{ 
         order: -1;
     }
     #logorr{
         position: fixed;
-        justify-content: flex-end
+        bottom: 100px;
+        right: 30px;
     }
     main{
-        margin-left: 25%;
+        margin-left: 27%;
     }
+
+    .section-activities{
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 80%;
+        justify-content: flex-start;
+    }
+
+    .section-activities article{
+        width: 30%;
+    }
+
     footer{
         margin-left: 25%;
     }
