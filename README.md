@@ -1,4 +1,4 @@
-<em>  Landing page on desktop for Mega Rocket SA </em>
+<em> Week 02: Landing page on desktop for Mega Rocket SA </em>
 ---
 ## Description:
 Welcome to my project! this the landing page on html for Mega Rocket SA Gym. it's the desktop version. It´s made for the users of the gym, the gym teachers and the super admins. Here you will see the information of the gym, a contact, the memberships and activities. It allows you to make the registration, have acces to a membership or to clear any doubt. 
@@ -17,7 +17,7 @@ Welcome to my project! this the landing page on html for Mega Rocket SA Gym. it'
 ---
 ---
 
-# Styles for my landing page:
+# Week 03: Styles for my landing page
 
 
 ## Description: 
