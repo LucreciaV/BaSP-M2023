@@ -78,8 +78,7 @@ console.log("-Exercise 2.b:");
   //console.log(w);
 
  console.log(i.toUpperCase() + l.toLowerCase() + " " + u.toUpperCase() + v.toLowerCase ());
- 
- 
+
 
 
 
