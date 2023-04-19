@@ -9,7 +9,7 @@ var sueldoMarzo, sueldoAbril;
 
 sueldoMarzo = 35000;
 sueldoAbril = 45000;
-
+ 
 var sumaSueldo = sueldoMarzo + sueldoAbril;
 
 console. log(sumaSueldo);
