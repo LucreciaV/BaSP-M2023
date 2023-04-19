@@ -11,9 +11,7 @@ h1{
     line-height: 47px;
     letter-spacing: 0em;
     text-align: center;
-
 }
-
 
 h2{
     color: rgba(0, 0, 0, 1); 
@@ -21,8 +19,7 @@ h2{
     font-size: 1,5em;
     font-weight: 700;
     text-align: center;
-    font-weight: 600;
-    
+    font-weight: 600;  
 }
 
 .h2{
@@ -32,7 +29,6 @@ h2{
     letter-spacing: 0em;
     text-align: center;
     color: rgba(87, 79, 79, 1);
-
 }
 
 .home-img{
@@ -178,7 +174,7 @@ form button{
     padding-top: 15px;
     padding-left: 60px;
     padding-right: 35px;
-    padding-bottom: 2px;
+    padding-bottom: 25px;
     height: 456px;
     width: 60%;
 }
@@ -201,6 +197,7 @@ form button{
     width: 100%;
     left: 72px;
     width: 100%;
+    margin-bottom: 60px;
 }
 
 .activities{
@@ -250,7 +247,7 @@ form button{
     margin-bottom: 25px;
  }
 
- .membership{
+.membership{
     font-size: 14px;
     font-weight: 600;
     line-height: 30px;
@@ -295,6 +292,9 @@ form button{
 }
 
 @media screen and (min-width: 600px){
+    main{
+        margin-left: 90px;
+    }
     #home {
         flex-direction: column-reverse;
     }
@@ -325,6 +325,9 @@ form button{
     #icon{
         margin: 10px;
         width: 25%;
+    }
+    footer{
+        margin-right: 60px;
     }
 }
 

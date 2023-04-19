@@ -1,8 +1,10 @@
 main {
     display: flex;
+    margin-left: 40px;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    max-width: 70%;
     width: 100vw;
     flex-grow: 1;
  }
@@ -15,10 +17,10 @@ h1{
     display: flex;
   }
   
-  .flex-column {
+.flex-column {
     display: flex;
     flex-direction: column;
-  }
+}
   
   .center {
     justify-content: center;

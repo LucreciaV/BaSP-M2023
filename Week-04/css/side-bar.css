@@ -106,6 +106,13 @@ nav input{
     #menu-haburguer{
         display: none;
     }
-
-
+    
+    .inbutton{
+        max-width: 65%;
+    }
+    .img-nav{
+        width: 35px;
+        height: 35px;
+        margin-left: 45px;
+    }
 }
