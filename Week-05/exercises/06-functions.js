@@ -90,11 +90,4 @@ function valid(m){
         m = Math.round(m);
         return m;
  }
- function newval(a,b)
- else{
-    return m;
- }
-}
-
-
-
+};

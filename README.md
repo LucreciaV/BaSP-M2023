@@ -35,3 +35,13 @@ During this week we had to replicate the web page from the first week, we used r
 I had to modify some code on html to make the responsive. 
 
 It help me a lot to watch and modify the inspection from the browser.
+```
+
+-----
+----
+## Week 05:
+----
+
+In the project of this week I worked with javascript, I did all the exercises on my js code on visual studio and then cheked the results in the console of my web page. To resolve the exercises I used variables and operators, strings, arrays, booleans, loops, and functions.
+
+---
