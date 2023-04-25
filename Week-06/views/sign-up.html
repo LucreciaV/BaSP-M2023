@@ -1,51 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../css/reset.css" />
-    <link rel="stylesheet" href="../css/common.css" />
-    <link rel="stylesheet" href="../css/header.css" />
-    <link rel="stylesheet" href="../css/login.css" />
-    <script src="../js/sign-up.js"></script>
-    <title>Gimnasio Mega Rocket SA</title>
-  </head>
-  <body>
-    <header>
-      <p>Mega Rocket SA</p>
-    </header>
-    <main>
-      <h1>Register</h1>
-      <a
-        ><img id="rrlogo" src="../../Assets/Images/LOGO-RR 3.png" alt="LOGO-RR"/>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/common.css">
+  <link rel="stylesheet" href="../css/header.css">
+  <link rel="stylesheet" href="../css/sign-up.css">
+  <script src="../js/sign-up.js"></script>
+  <title>Gimnasio Mega Rocket SA</title>
+</head>
+<body>
+  <header>
+    <p>Mega Rocket SA</p>
+  </header>
+  <main>
+    <a><img id="row-back" src="../../Assets/Images/row.png" alt="back"></a>
+    <h1>Register</h1>
+      <a>
+        <img id="rrlogo" src="../../Assets/Images/LOGO-RR 3.png" alt="LOGO-RR"/>
     | </a>
-      <form class="register-form">
-        <label for="name">Name</label>
-        <input id="name" type="text" />
-        <label for="last-name">Last name</label>
-        <input id="last-name" type="text" />
-        <label for="dni">dni</label>
-        <input id="dni" type="text" />
-        <label for="birth">Birth date</label>
-        <input id="birth" type="text" />
-        <label for="phone-number">Phone number</label>
-        <input id="phone-number" type="text" />
-        <label for="adress">Adress</label>
-        <input id="adress" type="text" />
-        <label for="zip">Zip code</label>
-        <input id="zip" type="text" />
-        <label for="city">City</label>
-        <input id="city" type="text" />
-        <label for="email">Email</label>
-        <input id="email" type="text" />
-        <label for="password">Password</label>
-        <input id="password" type="text" />
-        <label for="confirm">Confirm password</label>
-        <input id="confirm" type="text" />
-        <button class="">Continue</button>
-        <a href="./login.html"><button class="">Log in</button></a>
+      <form  class="registration-form">
+          <div id="fill-registration">
+            <label  id="nameText" for="name">Name</label>
+            <input id="nameInput" type="text"/>
+            <p id="nameError" class="error none">Enter your Name</p>
+            <label for="surnameText">Surname</label>
+            <input id="surnameInput" type="text"/>
+            <p id="surnameError" class="error none">enter your Surname</p>
+            <label for="idText">ID</label>
+            <input id="idInput" type="text"/>
+            <p id="idError" class="error none">Enter your id</p>
+            <label for="birthdayText">Birth date</label>
+            <input id="birthdayInput" type="text"/>
+            <p id="birthdayError" class="error none">Enter your birthday</p>
+            <label for="phoneText">Phone number</label>
+            <input id="phoneInput" type="text"/>
+            <p id="phoneError" class="error none">enter your phone</p>
+            <label for="addressText">Address</label>
+            <input id="addressInput" type="text"/>
+            <label for="zipText">Zip code</label>
+            <input id="zipInput" type="text"/>
+            <label for="city">City</label>
+            <input id="city" type="text"/>
+            <label id="emailText "for="email">Email</label>
+            <input id="emailInput" type="text"/>
+            <p class="error none">Email invalid</p>
+            <label for="password">Password</label>
+            <input id="passwordInput" type="text"/>
+            <label for="confirm">Confirm password</label>
+            <input id="confirm" type="text"/>
+          </div>  
+          <div class="button-registration">
+            <button class="continue">Continue</button>
+            <a  href="./login.html"><button class="log">Log in</button></a>
+          </div>  
       </form>
     </main>
-  </body>
+</body>
 </html>

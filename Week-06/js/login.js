@@ -50,8 +50,7 @@ function hasNumbers(myString) {
   function hasNumbersAndChar(myString) {
     var num = 0;
     var char = 0;
-
-  
+    if (myString.length>=8){
     for (var x = 0; x < myString.length; x++) {
       if (hasNumbers(myString[x])) {
         num++;
@@ -64,6 +63,8 @@ function hasNumbers(myString) {
     }
     return false;
   }
+    return false;
+}
 
     var logIn = document.getElementById('form-alert');
         logIn.onsubmit = function button (event){
