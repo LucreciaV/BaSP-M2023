@@ -46,3 +46,33 @@ It help me a lot to watch and modify the inspection from the browser.
 [Web page with the results.](https://lucreciav.github.io/BaSP-M2023/Week-05/) 
 
 ---
+ # Week 06:
+```python
+                ##javascript project
+```
+During this week I worked following the screenflow from the week 1. The problem for week 06 involves adding a Sign Up registration page and a login page, connected with what was developed in week 04. I had to create the Log In page and Sing Up page, using html then css and JavaScript at last.
+The forms should contain different fields with specific validations. The design must be responsive. All the logic of the forms must be developed with JavaScript.
+
+```python
+#Log in: 
+*Email: It must have a valid email format.
+*Password: Formed by letters and numbers.
+*Blur and Focus event o each field.
+*Alert message when the Log in button is pressed charging the correct information of the fields or showing the invalid field.
+```
+```python
+#Sign up:
+*Name: Only letters and must have more than 3 letters.
+*Last Name: Only letters and must have more than 3 letters.
+*ID Number: Only numbers and must have more than 7 numbers.
+*Date of Birth: In format dd/mm/yyyy.
+*Phone Number: Only numbers and must have 10 numbers.
+*Address: At least 5 characters with letters, numbers, and a space in between.
+*City: Alphanumeric text and must have more than 3 letters.
+*Zip Code: Only numbers and must have between 4 and 5 numbers.
+*Email: Must have a valid email format.
+*Password: At least 8 characters, formed by letters and numbers.
+*Confirm Password: At least 8 characters, formed by letters and numbers.
+*Blur and Focus event o each field.
+*Alert message when the Register button is pressed charging the correct information of the fields or showing the invalid field.
+```
