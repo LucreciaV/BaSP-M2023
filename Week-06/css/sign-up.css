@@ -7,6 +7,7 @@ main{
     flex-direction: column;
     align-content: center;
     max-width: none;
+    
 }
 
 #row-back{
@@ -23,13 +24,31 @@ h1{
     text-align: center;
 }
 
-.button-registration{
+.button-registratio{
+    display: flex;
+    flex-direction: column;
+}
+
+.continue{
     background-color: #AACE9B;
     gap: 10px;
     font-size: 16px;
     border: 2px;
-    height: 33px;
-    width: 30%;
+    height: 50px;
+    width: 80px;
+    border-radius: 5px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.log{
+    background-color: #AACE9B;
+    gap: 10px;
+    font-size: 16px;
+    border: 2px;
+    height: 50px;
+    width: 80px;
     border-radius: 5px;
     font-weight: 700;
     margin-bottom: 20px;
@@ -38,7 +57,8 @@ h1{
 
 .registration-form{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
     align-items: center;
     font: 'Roboto';
     font-weight: 600;
