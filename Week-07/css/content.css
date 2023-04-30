@@ -1,0 +1,377 @@
+
+#home{ 
+    width: 90%;
+}
+
+h1{
+    font-family: Roboto;
+    color: rgba(55, 56, 103, 1) ;
+    font-size: 3em;
+    font-weight: 700;
+    line-height: 47px;
+    letter-spacing: 0em;
+    text-align: center;
+}
+
+h2{
+    color: rgba(0, 0, 0, 1); 
+    font-family: Roboto;
+    font-size: 1,5em;
+    font-weight: 700;
+    text-align: center;
+    font-weight: 600;  
+}
+
+.h2{
+    font-family: Roboto;
+    font-size: 1em;
+    font-weight: 500;
+    letter-spacing: 0em;
+    text-align: center;
+    color: rgba(87, 79, 79, 1);
+}
+
+.home-img{
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.gymroom{
+    width: 90%;
+    height: 70%;
+    border-radius: 5px;
+}
+
+.home-img img{
+    margin-top: 109px;
+    width: 90%;
+    height: 90%;
+}
+
+.free-full{
+    max-width: 90%;
+    text-align: center;
+    margin-bottom: 150px;
+}
+
+.about-container{
+    width: 85%;
+
+}
+.about{
+    max-width: 90%;
+    text-align: center;
+}
+
+.img-about{
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+}
+ 
+.paragraph-about{
+    display: flex;
+    display: none;
+}
+
+.img-heading-about{
+   display: flex;
+}
+
+#header-form{
+    margin-top: 150px;
+    text-align: center;
+    padding: 5px 5px;
+    height: 59px;
+    left: 85px;
+    top: 2287px;
+    border-radius: 10px;
+    font-weight: 700;
+}
+
+form{
+    margin-bottom: 5px;
+    font-size: 16px;
+    font-weight: 550;
+    line-height: 15px;
+    margin: auto;
+    text-align: center;
+}
+
+.form-label{
+    color: rgba(0, 0, 0, 1);
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 15px;
+    display:block ;
+    margin: auto;
+    margin-bottom: 7px;
+    width: 100%;
+}
+
+.radio-buttons-container{
+    display: flex;
+    flex-direction: column;
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 16px;
+    text-align: left;
+    margin-bottom: 24px;
+}
+
+#input-form{
+    margin-bottom: 40px;
+    background-color:  rgba(217, 217, 217, 1);
+    height: 35px;
+    width: 100%;
+    border-radius: 1px;
+    border: 0px;
+    outline-color: #2a2a320a;
+    border-bottom:#2a2a3256
+}
+
+#comments-text{
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 14px;
+}
+#input-comments{
+    background-color: #FFFFFF;
+    border: 0px;
+    height: 121px;
+    width: 100%;
+    border-radius: 1px;
+    outline-color: #2a2a320a;
+    border-bottom:#2a2a322c;
+    box-shadow: 4px 5px 1px 1px #2a2a320c;
+    margin-bottom: 15px;
+}
+
+form button{
+    display: block;
+    margin: auto;
+    box-shadow: 4px 5px 1px 1px #2a2a3210;
+}
+
+.button-send{
+    background-color: #AACE9B;
+    gap: 10px;
+    font-size: 16px;
+    border: 2px;
+    height: 33px;
+    width: 30%;
+    border-radius: 5px;
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+
+.about-text{
+    background-color: rgba(170, 206, 155, 0.075);
+    padding-top: 15px;
+    padding-left: 60px;
+    padding-right: 35px;
+    padding-bottom: 25px;
+    height: 456px;
+    width: 60%;
+}
+.about-rr{
+    display: flex;
+    justify-content: center;
+    font-size: 37px;
+    font-weight: 700;
+    color: rgba(55, 56, 103, 1);
+    width: 100%;
+}
+
+.about-p{
+    display: flex;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 30px;
+    letter-spacing: 0em;
+    width: 100%;
+    left: 72px;
+    width: 100%;
+    margin-bottom: 60px;
+}
+
+.activities{
+    margin-top: 30px;
+    text-align: center;
+    width: 60%;
+    margin: auto;
+    padding: 20px 40px;
+    background: rgba(170, 206, 155, 1);
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.section-activities{
+    margin-top: 10px;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.section-activities article{
+    gap: 10px;
+}
+
+.img-activities{
+    width: 200px;
+    height: 230px;
+    object-fit: contain;
+    border-radius: 5px;
+}
+
+.membership-types{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#membership-head{
+    text-align: center;
+    font-size: 18px;
+    padding-top: 10px;
+    border-radius: nullpx;
+    height: 32px;
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 25px;
+ }
+
+.membership{
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 30px;
+    width: 75%;
+    letter-spacing: 0,8em;
+    color: rgba(0, 0, 0, 1);
+    margin-bottom: 40px;
+    list-style-type: none;
+}
+
+ .membership-black{
+    margin-top: 150px;
+    color: #FFFFFF;
+    background-color: rgba(42, 42, 50, 1);
+}
+
+.membership-classic{
+    color:rgba(0, 0, 0, 1);
+    background-color:rgba(204, 203, 203, 1);
+}
+
+.membership-oclasses{
+    color: rgba(0, 0, 0, 1);
+    background-color:rgba(237, 237, 237, 1);
+}
+
+#logorr{
+    display: flex;
+}
+
+#icon{
+    margin: 20px;
+    flex: auto;
+    width: 25%;
+    height: 25%;
+    object-fit: contain;
+    min-width: 80px;
+}
+
+#p-footer{
+    max-width: 80%;
+}
+
+@media screen and (min-width: 600px){
+    main{
+        margin-left: 90px;
+    }
+    #home {
+        flex-direction: column-reverse;
+    }
+    .home-img{
+        margin-top: 0px;
+        margin-bottom: 100px;
+    }
+    .free-full{
+        margin-bottom: 0px;
+    }
+    .about{
+        margin-bottom: 45px;
+    }
+   .form-container{
+        width: 90vw;
+    }
+    .img-activities{
+        width: 300px;
+        height: 360px;
+    }
+    .section-activities article{
+        flex-direction: column;
+    }
+    .membership-types{
+        width: 70%;
+        margin-bottom: 50px;
+    }
+    #icon{
+        margin: 10px;
+        width: 25%;
+    }
+    footer{
+        margin-right: 60px;
+    }
+}
+
+@media screen and (min-width: 1024px){
+    main{
+        margin-left: 25%;
+    }
+    h1{
+        margin-top: 150px;
+    }
+    .paragraph-about{
+        display: flex;
+    }
+    .about-container{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 80%;
+    }
+    
+    .home-img{ 
+        order: -1;
+    }
+    #logorr{
+        position: fixed;
+        bottom: 100px;
+        right: 30px;
+    }
+    main{
+        margin-left: 27%;
+    }
+
+    .section-activities{
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 80%;
+        justify-content: flex-start;
+    }
+
+    .section-activities article{
+        width: 30%;
+    }
+
+    footer{
+        margin-left: 25%;
+    }
+}

@@ -1,0 +1,80 @@
+header{
+    position: inherit;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    max-width: none;
+    justify-content: space-around;
+}
+
+h1{
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 47px;
+    letter-spacing: 0em;
+    text-align: center;
+    margin-bottom: 30px;
+    margin-top: 60px;
+}
+
+#row-back{
+    margin-left: 800px;
+    margin-top: 10px;
+    position: fixed;
+}
+
+.login-form{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    font: 'Roboto';
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 16.41px;
+    margin-top: 5px;
+    max-height: 70%;
+    background-color: #FFFFFF;
+    width: 526px;
+    height: 497px;
+    box-shadow: 5px 5px 8px -2px rgba(0, 0, 0, 0.5);
+    border-radius: 39px;
+}
+
+#label-login{
+    display: flex;
+    align-content: center;
+    width: 80%;
+    height: 30px;
+    margin-left: 10px;
+}
+
+
+.recover{
+    display: flex;
+    justify-content: space-between;
+}
+
+.button-form{
+    background-color: #AACE9B;
+    gap: 10px;
+    font-size: 16px;
+    border: 2px;
+    height: 33px;
+    width: 30%;
+    border-radius: 5px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.red-border{
+    border-color: rgb(255, 0, 0);
+}
+
+.none{
+    display: none;
+}

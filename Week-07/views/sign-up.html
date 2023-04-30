@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/common.css">
+  <link rel="stylesheet" href="../css/header.css">
+  <link rel="stylesheet" href="../css/sign-up.css">
+  <script src="../js/sign-up.js"></script>
+  <title>Gimnasio Mega Rocket SA</title>
+</head>
+<body>
+  <header>
+    <p>Mega Rocket SA</p>
+  </header>
+  <main>
+    <a href="./index.html"><img id="row-back" src="../../Assets/Images/row.png" alt="back"></a>
+    <h1>Register</h1>
+      <a>
+        <img id="rrlogo" src="../../Assets/Images/LOGO-RR 3.png" alt="LOGO-RR"/>
+    | </a>
+      <form  class="registration-form flex-column">
+          <div id="fill-registration">
+            <div class="flex two-label-input-container">
+              <div class="flex column one-label-input-container">  
+                <label  id="nameText" for="name">Name</label>
+                <input id="nameInput" type="text"/>
+                <p id="nameError" class="error none">Enter your Name</p>
+              </div>
+              <div class="flex column one-label-input-container">
+                <label for="surnameText">Surname</label>
+                <input id="surnameInput" type="text"/>
+                <p id="surnameError" class="error none">Enter your Surname</p>
+              </div>
+            </div>
+            <div class="flex two-label-input-container">
+              <div class="flex column one-label-input-container">
+                <label for="idText">ID</label>
+                <input id="idInput" type="text"/>
+                <p id="idError" class="error none">Enter your id</p>
+              </div>
+              <div class="flex column one-label-input-container"> 
+                <label for="birthdayText">Birth date</label>
+                <input id="birthdayInput" type="date"/>
+                <p id="birthdayError" class="error none">Enter your birthday</p>
+              </div>
+            </div>  
+            <div class="flex two-label-input-container">
+              <div class="flex column one-label-input-container">
+                <label for="phoneText">Phone number</label>
+                <input id="phoneInput" type="text"/>
+                <p id="phoneError" class="error none">enter your phone</p>
+              </div>
+              <div class="flex column one-label-input-container">
+                <label for="addressText">Address</label>
+                <input id="addressInput" type="text"/>
+                <p id="addressError" class="error none">Address invalid</p>
+              </div>
+            </div>
+            <div class="flex two-label-input-container">
+              <div class="flex column one-label-input-container">
+                <label for="zipText">Zip code</label>
+                <input id="zipInput" type="text"/>
+                <p id="zipError" class="error none">Enter your Zip code</p>
+              </div>
+              <div class="flex column one-label-input-container">
+                <label for="city">City</label>
+                <input id="cityInput" type="text"/>
+                <p id="cityError" class="error none">City invalid</p>
+              </div>
+            </div>
+            <div class="flex two-label-input-container">  
+              <div class="flex column one-label-input-container">
+                <label id="emailText "for="email">Email</label>
+                <input id="emailInput" type="text"/>
+                <p id="emailError" class="error none">Email invalid</p>
+              </div>
+              <div class="flex column one-label-input-container">
+                <label for="password">Password</label>
+                <input id="password" type="text"/>
+                <p id="passwordError" class="error none">Passwords invalid</p>
+              </div>
+            </div>
+            <div class="flex two-label-input-container">
+              <div class="flex column one-label-input-container">
+                <label for="confirm">Confirm password</label>
+                <input id="passwordRepeat" type="text"/>
+                <p id="dontMatch" class="error none">Passwords doesn't match</p>
+              </div>
+            </div>
+          </div>  
+          <div class="button-registration">
+            <button class="continue">Continue</button>
+            <a  href="./login.html"><button class="log">Log in</button></a>
+          </div>  
+      </form>
+    </main>
+</body>
+</html>

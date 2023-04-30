@@ -1,0 +1,49 @@
+main {
+    display: flex;
+    margin-left: 40px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 70%;
+ }
+
+h1{
+    max-width: 90%;
+    text-align: center;
+} 
+.flex {
+    display: flex;
+  }
+  
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+  
+.center {
+    justify-content: center;
+    align-items: center;
+  }
+
+body{ 
+    
+    font-family: 'Roboto', sans-serif;
+  }
+
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+footer div{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.error{
+  color: red;
+  font-size: 10px;
+}
