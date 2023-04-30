@@ -199,8 +199,7 @@ window.onload = function () {
     return false;
   }
 
-  var cityInput = document.getElementById("cityInput");
-  var errorCityClass = document.getElementById("cityError");
+  var errorCity = document.getElementById("cityError");
 
   function hasNumbers(myString) {
     var numbers = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"];
@@ -232,20 +231,21 @@ window.onload = function () {
     return false;
   }
 
-  console.log(cityInput);
+ 
   var cityInput = document.getElementById("cityInput");
   cityInput.addEventListener("blur", function (event) {
     if (!validateCity(event.target.value)) {
       cityInput.classList.add("red-border");
-      errorCityClass.classList.remove("none");
+      errorCity.classList.remove("none");
     }
   });
+  console.log(cityInput);
 
   
 
   cityInput.addEventListener("focus", function (event) {
     cityInput.classList.remove("red-border");
-    errorCityClass.classList.add("none");
+    errorCity.classList.add("none");
   });
 
   var zipInput = document.getElementById("zipInput");

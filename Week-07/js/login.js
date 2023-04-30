@@ -10,6 +10,7 @@ var emailExpression = /^[^@]+@[^@]+.[a-zA-Z]{2,}$/;
         return false;
     }
     emailInput.addEventListener('blur', function(event){
+        console.log('blur', event.target.value);
         if(!validateEmail(event.target.value)){
             emailInput.classList.add('red-border');
             errorE.classList.remove('none');
@@ -19,13 +20,13 @@ var emailExpression = /^[^@]+@[^@]+.[a-zA-Z]{2,}$/;
     emailInput.addEventListener('focus', function(event){
         emailInput.classList.remove('red-border');
         errorE.classList.add('none');
-    })
+    });
 
     var passwordInput = document.getElementById('password');
     var errorMessage = document.querySelectorAll('.error');
      
    passwordInput.addEventListener('blur', function(event){
-    if(!hasNumbersAndChar(event.target.value)){
+    if(!validatePassword(event.target.value)){
         passwordInput.classList.add('red-border');
         errorMessage[1].classList.remove('none');
     }
@@ -36,48 +37,106 @@ var emailExpression = /^[^@]+@[^@]+.[a-zA-Z]{2,}$/;
         errorMessage[1].classList.add('none');
     });
 
-function hasNumbers(myString) {
-    var numbers = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"];
-  
-    for (var x = 0; x < myString.length; x++) {
-      if (numbers.includes(myString[x])) {
-        return true;
+    function isUpLetter(c){
+      for (var i=65; i<=90; i++){
+          if (c.charCodeAt(0) == i){
+              return true;
+          }
       }
-    }
-    return false;
+      return false;
   }
-  
-  function hasNumbersAndChar(myString) {
-    var num = 0;
-    var char = 0;
-    if (myString.length>=8){
-    for (var x = 0; x < myString.length; x++) {
-      if (hasNumbers(myString[x])) {
-        num++;
-      } else {
-        char++;
-      }
-      if (num > 0 && char > 0) {
-        return true;
-      }
-    }
-    return false;
-  }
-    return false;
-}
 
+  function isLowLetter(c){
+      for (var i=97; i<=122; i++){
+          if (c.charCodeAt(0) == i){
+              return true;
+          }
+      }
+      return false;
+  }
+
+  function isNumber(c){
+      for (var i=0; i<10; i++){
+          if (c == i){
+              return true;
+          }
+      }
+      return false;
+  }
+
+  function isSpecialCharacter(c){
+      if(!(isUpLetter(c) || isLowLetter(c) || isNumber(c))){
+          return true;
+      }
+      return false;
+  }
+
+  function validatePassword(password){
+      if ((password.length>=8) && (password.length<=20)){
+          var lowLetter=false;
+          var upLetter=false;
+          var specialCharacter=false;
+          var number=false;
+          var cont=0;
+          while((cont<password.length) && (lowLetter==false ||
+               upLetter==false || specialCharacter==false || number==false)){
+              if(isLowLetter(password[cont])){
+                  lowLetter=true;
+              }else if(isUpLetter(password[cont])){
+                  upLetter=true;
+              }else if(isSpecialCharacter(password[cont])){
+                  specialCharacter=true;
+              }else if(isNumber(password[cont])){
+                  number=true;
+              }
+              cont++;
+          }
+          if(!(lowLetter==false || upLetter==false || specialCharacter==false || number==false)){
+              return true;
+          }
+          return false;
+      }
+      return false;
+  }
     var logIn = document.getElementById('form-alert');
         logIn.onsubmit = function button (event){
         event.preventDefault();
-        if (validateEmail(emailInput.value) && hasNumbersAndChar(passwordInput.value)){
+        if (validateEmail(emailInput.value) && validatePassword(passwordInput.value)){
             alert(emailInput.value + passwordInput.value + 'email and password valid'); 
         }else {
             if(!validateEmail(emailInput.value)){
                 alert ('Email invalid' + emailInput.value);
         }
-        if (!hasNumbersAndChar(passwordInput.value)){
+        if (!validatePassword(passwordInput.value)){
             alert('Password invalid' + passwordInput)
         }}
+}
 
-  
-    }}
+var button = document.getElementById("button-form");
+button.addEventListener('click', function (event) {
+  var url = `https://api-rest-server.vercel.app/login?email=${emailInput.value}&password=${passwordInput.value}`;
+  event.preventDefault();
+  if (
+    validateEmail(emailInput.value) &&
+    validatePassword(passwordInput.value)
+  ) {
+    fetch(url)
+      .then(function (response) {
+        return response.json();
+      })
+      .then(function (data) {
+        alert(data.msg);
+      })
+      .catch(function (error) {
+        alert(data.msg);
+      });
+  } else {
+    if (!validateEmail(emailInput.value)) {
+      alert("ERROR =" + emailInput.value);
+    }
+    if (!validatePassword(passwordInput.value)) {
+      alert("ERROR =" + passwordInput.value);
+    }
+  }
+});
+}
