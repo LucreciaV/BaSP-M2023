@@ -98,7 +98,7 @@ window.onload = function () {
     return false;
   }
 
-  function changeDateFormat(birthdayError) {
+  function changeDateFormat(date) {
     var dateArray = date.split("-");
 
     year = dateArray[0];
@@ -195,12 +195,14 @@ window.onload = function () {
   var errorCity = document.getElementById("cityError");
 
   function validateCity(c) {
+    var num = 0;
+    var char = 0;
     if (c.length >= 3) {
       for (var x = 0; x < c.length; x++) {
         if (!hasNumbers(c[x])) {
-            num ++;
+            num++;
         }else{
-            char ++;
+            char++;
         }
         if(num>0 && char>0){
 
@@ -218,7 +220,6 @@ window.onload = function () {
       errorCity.classList.remove("none");
     }
   });
-  console.log(cityInput);
 
   cityInput.addEventListener("focus", function (event) {
     cityInput.classList.remove("red-border");
@@ -317,34 +318,24 @@ function isNumber(c){
     return false;
   }
 
-function isSpecialCharacter(c){
-    if(!(isUpLetter(c) || isLowLetter(c) || isNumber(c))){
-        return true;
-    }
-    return false;
-  }
-
 function validatePassword(password){
     if ((password.length>=8) && (password.length<=20)){
         var lowLetter=false;
         var upLetter=false;
-        var specialCharacter=false;
         var number=false;
         var cont=0;
         while((cont<password.length) && (lowLetter==false ||
-             upLetter==false || specialCharacter==false || number==false)){
+             upLetter==false || number==false)){
             if(isLowLetter(password[cont])){
                 lowLetter=true;
             }else if(isUpLetter(password[cont])){
                 upLetter=true;
-            }else if(isSpecialCharacter(password[cont])){
-                specialCharacter=true;
             }else if(isNumber(password[cont])){
                 number=true;
             }
             cont++;
         }
-        if(!(lowLetter==false || upLetter==false || specialCharacter==false || number==false)){
+        if(!(lowLetter==false || upLetter==false || number==false)){
             return true;
         }
         return false;
@@ -424,7 +415,7 @@ function validatePassword(password){
     if (
       validateCity(cityInput.value) &&
       validateZip(zipInput.value) &&
-      matchPassword(passwordRepeatInput.value)
+      matchPassword(passwordRepeatInput.value, passwordInput.value)
     ) {
       alert("city=" + cityInput.value + "postal" + zipInput.value);
     } else {
@@ -442,6 +433,7 @@ function validatePassword(password){
  var button = document.getElementById("continue");
   button.addEventListener("click", function (event) {
     urlSignUp =
+    "https://api-rest-server.vercel.app/signup?" +
     "name=" +
     nameInput.value +
     "&lastName=" +
@@ -449,7 +441,7 @@ function validatePassword(password){
     "&dni=" +
     idInput.value +
     "&dob=" +
-    birthdayInput.value +
+    changeDateFormat(birthdayInput.value) +
     "&phone=" +
     phoneInput.value +
     "&address=" +
@@ -476,48 +468,33 @@ function validatePassword(password){
       validateCity(cityInput.value) &&
       validateEmail(emailInput.value) &&
       validatePassword(passwordInput.value) &&
-      matchPassword(passwordRepeatInput.value)
+      matchPassword(passwordRepeatInput.value, passwordInput.value)
 ){
-  fetch(urlSignUp)
-    .then(function (response) {
-      return response.json();
-    })
-    .then(function (data) {
-      if (data.hasOwnProperty("data")) {
-        var keys = Object.keys(data.data);
-        for (var i = 1; i < keys.length; i++) {
-          var key = keys[i];
-          if (data.data.hasOwnProperty(key)) {
-            var value = data.data[key];
-            localStorage.setItem(key, value);
-            alert(key + ": " + value);
-          }
-        }
-      } else if (data.hasOwnProperty("errors")) {
-        for (var i = 0; i < data.errors.length; i++) {
-          var error = data.errors[i];
-          if (error.hasOwnProperty("msg")) {
-            alert(error.msg);
-          }
-        }
-      }
-    });
+    localStorage.setItem('name', nameInput.value);
+                  localStorage.setItem('last-name', surnameInput.value);
+                  localStorage.setItem('id', idInput.value);
+                  localStorage.setItem('birth-date', birthdayInput.value);
+                  localStorage.setItem('phone-number', phoneInput.value);
+                  localStorage.setItem('address', addressInput.value);
+                  localStorage.setItem('zip', zipInput.value);
+                  localStorage.setItem('city', cityInput.value);
+                  localStorage.setItem('email', emailInput.value);
+                  localStorage.setItem('password', passwordInput.value);
+                  localStorage.setItem('confirm-password', passwordRepeatInput.value);
   }
 });
-document.addEventListener("DOMContentLoaded", ReloadInfo());
-function ReloadInfo() {
-  nameInput.value = localStorage.getItem("name");
-  surnameInput.value = localStorage.getItem("lastName");
-  addressInput.value = localStorage.getItem("address");
-  zipInput.value = localStorage.getItem("zip");
-  birthdayInput.value = localStorage.getItem("dob");
-  phoneInput.value = localStorage.getItem("phone");
-  idInput.value = localStorage.getItem("dni");
-  cityInput.value = localStorage.getItem("city");
-  emailInput.value = localStorage.getItem("email");
-  passwordInput.value = localStorage.getItem("password");
-  passwordRepeatInput.value = localStorage.getItem("password");
-}
+nameInput.value = localStorage.getItem('name');
+surnameInput.value = localStorage.getItem('last-name');
+addressInput.value = localStorage.getItem('address');
+zipInput.value = localStorage.getItem('zip');
+birthdayInput.value = localStorage.getItem('birth-date');
+phoneInput.value = localStorage.getItem('phone-number');
+idInput.value = localStorage.getItem('id');
+cityInput.value = localStorage.getItem('city');
+emailInput.value = localStorage.getItem('email');
+passwordInput.value = localStorage.getItem('password');
+passwordRepeatInput.value = localStorage.getItem('confirm-password');
+
 
 
 
