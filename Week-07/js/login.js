@@ -26,6 +26,7 @@ var emailExpression = /^[^@]+@[^@]+.[a-zA-Z]{2,}$/;
     var errorMessage = document.querySelectorAll('.error');
      
    passwordInput.addEventListener('blur', function(event){
+    console.log('blur', event.target.value);
     if(!validatePassword(event.target.value)){
         passwordInput.classList.add('red-border');
         errorMessage[1].classList.remove('none');
