@@ -82,4 +82,10 @@ The forms should contain different fields with specific validations. The design 
 ```
 During this week I worked on the Log In form and Sign Up form from the week 6.
 We have alerts with the correct answer of the request and an alert of the error made on a field.
-I worked with an HTTP request using the method fetch of JavaScript. If all the info passes the validations,  this sends all the data that we filled on the forms and save it on the LocalStorage so every time we refresh the page we allready have the data from the fields filled.
+I worked with an HTTP request using the method fetch of JavaScript.
+with the Log in form the only user that can log in is:
+	email: rose@radiumrocket.com
+	password: BaSProfessional1
+With the Sign up form:
+ If all the info passes the validations,  this sends all the data that we filled on the forms and save it on the LocalStorage so every time
+ we refresh the page we allready have the data from the fields filled.
