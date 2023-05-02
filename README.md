@@ -76,3 +76,10 @@ The forms should contain different fields with specific validations. The design 
 *Blur and Focus event o each field.
 *Alert message when the Register button is pressed charging the correct information of the fields or showing the invalid field.
 ```
+---
+ # Week 07: [Link repository]( https://lucreciav.github.io/BaSP-M2023/Week-07/views/index.html).
+
+```
+During this week I worked on the Log In form and Sign Up form from the week 6.
+We have alerts with the correct answer of the request and an alert of the error made on a field.
+I worked with an HTTP request using the method fetch of JavaScript. If all the info passes the validations,  this sends all the data that we filled on the forms and save it on the LocalStorage so every time we refresh the page we allready have the data from the fields filled.
