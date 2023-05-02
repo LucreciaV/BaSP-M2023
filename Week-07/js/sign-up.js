@@ -369,9 +369,20 @@ function validatePassword(password){
   buttonform.onclick = function button(event) {
     if (
       validateEmail(emailInput.value) &&
-      validatePassword(passwordInput.value)
+      validatePassword(passwordInput.value) &&
+      nameValidation(nameInput.value) &&
+      nameValidation(surnameInput.value) &&
+      validateId(idInput.value) && 
+      validateDate(birthdayInput.value) &&
+      validatePhone(phoneInput.value) && 
+      validateAddress(addressInput.value) &&
+      validateCity(cityInput.value) &&
+      validateZip(zipInput.value) &&
+      matchPassword(passwordRepeatInput.value, passwordInput.value)
     ) {
-      alert("email" + emailInput.value + "password" + passwordInput.value);
+      alert("email: " + emailInput.value + "\npassword: " + passwordInput.value + "\nname:" + nameInput.value + "\nlastname: " + surnameInput.value + 
+      "\nId: " + idInput.value + "\ndate: " + birthdayInput.value + "\nphone: " + phoneInput.value + "\naddress: " + addressInput.value + "\ncity: " + cityInput.value +
+       "\npostal: " + zipInput.value + "\nconfirm password: " + passwordRepeatInput.value);
     } else {
       if (!validateEmail(emailInput.value)) {
         alert("ERROR =" + emailInput.value);
@@ -379,46 +390,24 @@ function validatePassword(password){
       if (!validatePassword(passwordInput.value)) {
         alert("ERROR =" + passwordInput.value);
       }
-    }
-
-    if (nameValidation(nameInput.value) && nameValidation(surnameInput.value)) {
-      alert("name=" + nameInput.value + "lastname=" + surnameInput.value);
-    } else {
       if (!nameValidation(nameInput.value)) {
         alert("ERROR=" + nameInput.value);
       }
       if (!nameValidation(surnameInput.value)) {
         alert("ERROR=" + surnameInput.value);
       }
-    }
-
-    if (validateId(idInput.value) && validateDate(birthdayInput.value)) {
-      alert("Id=" + idInput.value + "date=" + birthdayInput.value);
-    } else {
       if (!validateId(idInput.value)) {
         alert("ERROR=" + idInput.value);
       }
       if (!validateDate(birthdayInput.value)) {
         alert("ERROR=" + birthdayInput.value);
       }
-    }
-    if (validatePhone(phoneInput.value) && validateAddress(addressInput.value)) {
-      alert("phone=" + phoneInput.value + "address" + addressInput.value);
-    } else {
       if (!validatePhone(phoneInput.value)) {
         alert("ERROR=" + phoneInput.value);
       }
       if (!validateAddress(addressInput.value)) {
         alert("ERROR=" + addressInput.value);
       }
-    }
-    if (
-      validateCity(cityInput.value) &&
-      validateZip(zipInput.value) &&
-      matchPassword(passwordRepeatInput.value, passwordInput.value)
-    ) {
-      alert("city=" + cityInput.value + "postal" + zipInput.value);
-    } else {
       if (!validateCity(cityInput.value) && validateCity(cityInput.value)) {
         alert("ERROR=" + cityInput.value);
       }
@@ -432,6 +421,7 @@ function validatePassword(password){
   };
  var button = document.getElementById("continue");
   button.addEventListener("click", function (event) {
+    event.preventDefault();
     urlSignUp =
     "https://api-rest-server.vercel.app/signup?" +
     "name=" +
@@ -455,14 +445,13 @@ function validatePassword(password){
     "&password=" +
     passwordInput.value +
     "&password=" +
-    passwordRepeatInput.value +
-    event.preventDefault();
+    passwordRepeatInput.value;
     if(
       nameValidation(nameInput.value) &&
       nameValidation(surnameInput.value) &&
       validateEmail(emailInput.value) &&
       validateDate(birthdayInput.value) &&
-      validatePhone(passwordInput.value) &&
+      validatePhone(phoneInput.value) &&
       validateAddress(addressInput.value) &&
       validateZip(zipInput.value) &&
       validateCity(cityInput.value) &&
@@ -470,17 +459,17 @@ function validatePassword(password){
       validatePassword(passwordInput.value) &&
       matchPassword(passwordRepeatInput.value, passwordInput.value)
 ){
-    localStorage.setItem('name', nameInput.value);
-                  localStorage.setItem('last-name', surnameInput.value);
-                  localStorage.setItem('id', idInput.value);
-                  localStorage.setItem('birth-date', birthdayInput.value);
-                  localStorage.setItem('phone-number', phoneInput.value);
-                  localStorage.setItem('address', addressInput.value);
-                  localStorage.setItem('zip', zipInput.value);
-                  localStorage.setItem('city', cityInput.value);
-                  localStorage.setItem('email', emailInput.value);
-                  localStorage.setItem('password', passwordInput.value);
-                  localStorage.setItem('confirm-password', passwordRepeatInput.value);
+  localStorage.setItem('name', nameInput.value);
+                localStorage.setItem('last-name', surnameInput.value);
+                localStorage.setItem('id', idInput.value);
+                localStorage.setItem('birth-date', birthdayInput.value);
+                localStorage.setItem('phone-number', phoneInput.value);
+                localStorage.setItem('address', addressInput.value);
+                localStorage.setItem('zip', zipInput.value);
+                localStorage.setItem('city', cityInput.value);
+                localStorage.setItem('email', emailInput.value);
+                localStorage.setItem('password', passwordInput.value);
+                localStorage.setItem('confirm-password', passwordRepeatInput.value);
   }
 });
 nameInput.value = localStorage.getItem('name');
@@ -494,50 +483,4 @@ cityInput.value = localStorage.getItem('city');
 emailInput.value = localStorage.getItem('email');
 passwordInput.value = localStorage.getItem('password');
 passwordRepeatInput.value = localStorage.getItem('confirm-password');
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }
