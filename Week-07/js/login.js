@@ -44,7 +44,7 @@ var emailExpression = /^[^@]+@[^@]+.[a-zA-Z]{2,}$/;
           }
       }
       return false;
-  }
+    }
 
   function isLowLetter(c){
       for (var i=97; i<=122; i++){
@@ -53,7 +53,7 @@ var emailExpression = /^[^@]+@[^@]+.[a-zA-Z]{2,}$/;
           }
       }
       return false;
-  }
+    }
 
   function isNumber(c){
       for (var i=0; i<10; i++){
@@ -62,14 +62,14 @@ var emailExpression = /^[^@]+@[^@]+.[a-zA-Z]{2,}$/;
           }
       }
       return false;
-  }
+    }
 
   function isSpecialCharacter(c){
       if(!(isUpLetter(c) || isLowLetter(c) || isNumber(c))){
           return true;
       }
       return false;
-  }
+    }
 
   function validatePassword(password){
       if ((password.length>=8) && (password.length<=20)){
@@ -97,7 +97,8 @@ var emailExpression = /^[^@]+@[^@]+.[a-zA-Z]{2,}$/;
           return false;
       }
       return false;
-  }
+    }
+    
     var logIn = document.getElementById('form-alert');
         logIn.onsubmit = function button (event){
         event.preventDefault();
@@ -110,7 +111,7 @@ var emailExpression = /^[^@]+@[^@]+.[a-zA-Z]{2,}$/;
         if (!validatePassword(passwordInput.value)){
             alert('Password invalid' + passwordInput)
         }}
-}
+    }
 
 var button = document.getElementById("button-form");
 button.addEventListener('click', function (event) {
@@ -139,4 +140,4 @@ button.addEventListener('click', function (event) {
     }
   }
 });
-}
+};

@@ -1,5 +1,4 @@
 window.onload = function () {
-  var nameText = document.getElementById("nameText");
   var nameInput = document.getElementById("nameInput");
   var errorNameClass = document.getElementById("nameError");
 
@@ -34,7 +33,6 @@ window.onload = function () {
     errorNameClass.classList.add("none");
   });
 
-  var surnameText = document.getElementById("surnameText");
   var surnameInput = document.getElementById("surnameInput");
   var errorSurnameClass = document.getElementById("surnameError");
 
@@ -50,7 +48,6 @@ window.onload = function () {
     errorSurnameClass.classList.add("none");
   });
 
-  var idText = document.getElementById("idText");
   var idInput = document.getElementById("idInput");
   var errorIdClass = document.getElementById("idError");
 
@@ -89,35 +86,41 @@ window.onload = function () {
     errorIdClass.classList.add("none");
   });
 
-  var birthdayText = document.getElementById("birthdayText");
   var birthdayInput = document.getElementById("birthdayInput");
   var errorBirthdayClass = document.getElementById("birthdayError");
 
-  function validateBirthDate(a) {
-    var birthDate = new Date(a);
+  function validateDate(birthdayInput) {
+    var birthdayInput = new Date(birthdayInput);
     var currentDate = new Date();
-    var diference = currentDate.getTime() - birthDate.getTime();
-    var age = Math.floor(diference / 1000606024365);
-    if (age >= 12) {
+    if (birthdayInput.getTime() <= currentDate.getTime()) {
       return true;
     }
     return false;
   }
 
-  var phoneText = document.getElementById("phoneText");
+  function changeDateFormat(birthdayError) {
+    var dateArray = date.split("-");
+
+    year = dateArray[0];
+    month = dateArray[1];
+    day = dateArray[2];
+
+    dateArray = month + "/" + day + "/" + year;
+    return dateArray;
+  }
+  birthdayInput.addEventListener("blur", function (event) {
+    if (!validateDate(event.target.value)) {
+      birthdayInput.classList.add("red-border");
+      errorBirthdayClass.classList.remove("none");
+    }
+  });
+  birthdayInput.addEventListener("focus", function (event) {
+    birthdayInput.classList.remove("red-border");
+    errorBirthdayClass.classList.add("none");
+  });
+
   var phoneInput = document.getElementById("phoneInput");
   var errorPhoneClass = document.getElementById("phoneError");
-
-  function hasNumbers(myString) {
-    var numbers = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"];
-
-    for (var x = 0; x < myString.length; x++) {
-      if (numbers.includes(myString[x])) {
-        return true;
-      }
-    }
-    return false;
-  }
 
   function validatePhone(myPhone) {
     if (myPhone.length == 10) {
@@ -143,7 +146,7 @@ window.onload = function () {
     errorPhoneClass.classList.add("none");
   });
 
-  var addrressInput = document.getElementById("addressInput");
+  var addressInput = document.getElementById("addressInput");
   var errorAddressClass = document.getElementById("addressError");
 
   addressInput.addEventListener("blur", function (event) {
@@ -161,17 +164,6 @@ window.onload = function () {
   function hasSpace(myString) {
     if (myString == " ") {
       return true;
-    }
-    return false;
-  }
-
-  function hasNumbers(myString) {
-    var numbers = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"];
-
-    for (var x = 0; x < myString.length; x++) {
-      if (numbers.includes(myString[x])) {
-        return true;
-      }
     }
     return false;
   }
@@ -199,23 +191,13 @@ window.onload = function () {
     return false;
   }
 
+  var cityInput = document.getElementById("cityInput");
   var errorCity = document.getElementById("cityError");
 
-  function hasNumbers(myString) {
-    var numbers = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"];
-
-    for (var x = 0; x < myString.length; x++) {
-      if (numbers.includes(myString[x])) {
-        return true;
-      }
-    }
-    return false;
-  }
-
-  function validateCity(hasNumbersAndChar) {
-    if (hasNumbersAndChar.length >= 3) {
-      for (var x = 0; x < hasNumbersAndChar.length; x++) {
-        if (!hasNumbers(hasNumbersAndChar[x])) {
+  function validateCity(c) {
+    if (c.length >= 3) {
+      for (var x = 0; x < c.length; x++) {
+        if (!hasNumbers(c[x])) {
             num ++;
         }else{
             char ++;
@@ -224,15 +206,12 @@ window.onload = function () {
 
         }
           return true;
-        } 
+        }
       }
       return false;
     }
-    return false;
-  }
 
- 
-  var cityInput = document.getElementById("cityInput");
+
   cityInput.addEventListener("blur", function (event) {
     if (!validateCity(event.target.value)) {
       cityInput.classList.add("red-border");
@@ -241,8 +220,6 @@ window.onload = function () {
   });
   console.log(cityInput);
 
-  
-
   cityInput.addEventListener("focus", function (event) {
     cityInput.classList.remove("red-border");
     errorCity.classList.add("none");
@@ -250,17 +227,6 @@ window.onload = function () {
 
   var zipInput = document.getElementById("zipInput");
   var errorZipClass = document.getElementById("zipError");
-
-  function hasNumbers(myString) {
-    var numbers = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"];
-
-    for (var x = 0; x < myString.length; x++) {
-      if (numbers.includes(myString[x])) {
-        return true;
-      }
-    }
-    return false;
-  }
 
   function validateZip(myZip) {
     if (myZip.length >= 4 && myZip.length <= 5) {
@@ -296,6 +262,7 @@ window.onload = function () {
     }
     return false;
   }
+
   emailInput.addEventListener("blur", function (event) {
     if (!validateEmail(event.target.value)) {
       emailInput.classList.add("red-border");
@@ -307,6 +274,83 @@ window.onload = function () {
     emailInput.classList.remove("red-border");
     errorEmailClass.classList.add("none");
   });
+
+  var passwordInput = document.getElementById('password');
+  var errorMessage = document.querySelectorAll('.error');
+   
+ passwordInput.addEventListener('blur', function(event){
+  if(!validatePassword(event.target.value)){
+      passwordInput.classList.add('red-border');
+      errorMessage[9].classList.remove('none');
+  }
+});
+
+  passwordInput.addEventListener('focus', function(event){
+      passwordInput.classList.remove('red-border');
+      errorMessage[9].classList.add('none');
+  });
+
+  function isUpLetter(c){
+    for (var i=65; i<=90; i++){
+        if (c.charCodeAt(0) == i){
+            return true;
+        }
+    }
+    return false;
+  }
+
+function isLowLetter(c){
+    for (var i=97; i<=122; i++){
+        if (c.charCodeAt(0) == i){
+            return true;
+        }
+    }
+    return false;
+  }
+
+function isNumber(c){
+    for (var i=0; i<10; i++){
+        if (c == i){
+            return true;
+        }
+    }
+    return false;
+  }
+
+function isSpecialCharacter(c){
+    if(!(isUpLetter(c) || isLowLetter(c) || isNumber(c))){
+        return true;
+    }
+    return false;
+  }
+
+function validatePassword(password){
+    if ((password.length>=8) && (password.length<=20)){
+        var lowLetter=false;
+        var upLetter=false;
+        var specialCharacter=false;
+        var number=false;
+        var cont=0;
+        while((cont<password.length) && (lowLetter==false ||
+             upLetter==false || specialCharacter==false || number==false)){
+            if(isLowLetter(password[cont])){
+                lowLetter=true;
+            }else if(isUpLetter(password[cont])){
+                upLetter=true;
+            }else if(isSpecialCharacter(password[cont])){
+                specialCharacter=true;
+            }else if(isNumber(password[cont])){
+                number=true;
+            }
+            cont++;
+        }
+        if(!(lowLetter==false || upLetter==false || specialCharacter==false || number==false)){
+            return true;
+        }
+        return false;
+    }
+    return false;
+  }
 
   var passwordRepeatInput = document.getElementById("passwordRepeat");
   var dontMatchClass = document.getElementById("dontMatch");
@@ -330,47 +374,113 @@ window.onload = function () {
     dontMatchClass.classList.add("none");
   });
 
-  var passwordInput = document.getElementById("password");
-  var errorPasswordClass = document.getElementById("passwordError");
-
-  passwordInput.addEventListener("blur", function (event) {
-    if (!hasNumbersAndChar(event.target.value)) {
-      passwordInput.classList.add("red-border");
-      errorPasswordClass.classList.remove("none");
-    }
-  });
-
-  passwordInput.addEventListener("focus", function (event) {
-    passwordInput.classList.remove("red-border");
-    errorPasswordClass.classList.add("none");
-  });
-
-  function hasNumbers(myString) {
-    var numbers = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"];
-
-    for (var x = 0; x < myString.length; x++) {
-      if (numbers.includes(myString[x])) {
-        return true;
+  var buttonform = document.getElementById("continue");
+  buttonform.onclick = function button(event) {
+    if (
+      validateEmail(emailInput.value) &&
+      validatePassword(passwordInput.value)
+    ) {
+      alert("email" + emailInput.value + "password" + passwordInput.value);
+    } else {
+      if (!validateEmail(emailInput.value)) {
+        alert("ERROR =" + emailInput.value);
+      }
+      if (!validatePassword(passwordInput.value)) {
+        alert("ERROR =" + passwordInput.value);
       }
     }
-    return false;
-  }
 
-  function hasNumbersAndChar(myString) {
-    var num = 0;
-    var char = 0;
-    if (myString.length >= 8) {
-      for (var x = 0; x < myString.length; x++) {
-        if (hasNumbers(myString[x])) {
-          num++;
-        } else {
-          char++;
-        }
-        if (num > 0 && char > 0) {
-          return true;
-        }
+    if (nameValidation(nameInput.value) && nameValidation(surnameInput.value)) {
+      alert("name=" + nameInput.value + "lastname=" + surnameInput.value);
+    } else {
+      if (!nameValidation(nameInput.value)) {
+        alert("ERROR=" + nameInput.value);
       }
-      return false;
+      if (!nameValidation(surnameInput.value)) {
+        alert("ERROR=" + surnameInput.value);
+      }
     }
-    return false;
-  }
+
+    if (validateId(idInput.value) && validateDate(birthdayInput.value)) {
+      alert("Id=" + idInput.value + "date=" + birthdayInput.value);
+    } else {
+      if (!validateId(idInput.value)) {
+        alert("ERROR=" + idInput.value);
+      }
+      if (!validateDate(birthdayInput.value)) {
+        alert("ERROR=" + birthdayInput.value);
+      }
+    }
+    if (validatePhone(phoneInput.value) && validateAddress(addressInput.value)) {
+      alert("phone=" + phoneInput.value + "address" + addressInput.value);
+    } else {
+      if (!validatePhone(phoneInput.value)) {
+        alert("ERROR=" + phoneInput.value);
+      }
+      if (!validateAddress(addressInput.value)) {
+        alert("ERROR=" + addressInput.value);
+      }
+    }
+    if (
+      validateCity(cityInput.value) &&
+      validateZip(zipInput.value) &&
+      matchPassword(passwordRepeatInput.value)
+    ) {
+      alert("city=" + cityInput.value + "postal" + zipInput.value);
+    } else {
+      if (!validateCity(cityInput.value) && validateCity(cityInput.value)) {
+        alert("ERROR=" + cityInput.value);
+      }
+      if (!validateZip(zipInput.value)) {
+        alert("ERROR=" + zipInput.value);
+      }
+      if (!matchPassword(passwordRepeatInput.value)) {
+        alert("ERROR=" + passwordRepeatInput.value);
+      }
+    }
+  };
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
