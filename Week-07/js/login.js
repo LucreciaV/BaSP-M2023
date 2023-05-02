@@ -76,23 +76,20 @@ var emailExpression = /^[^@]+@[^@]+.[a-zA-Z]{2,}$/;
       if ((password.length>=8) && (password.length<=20)){
           var lowLetter=false;
           var upLetter=false;
-          var specialCharacter=false;
           var number=false;
           var cont=0;
           while((cont<password.length) && (lowLetter==false ||
-               upLetter==false || specialCharacter==false || number==false)){
+               upLetter==false || number==false)){
               if(isLowLetter(password[cont])){
                   lowLetter=true;
               }else if(isUpLetter(password[cont])){
                   upLetter=true;
-              }else if(isSpecialCharacter(password[cont])){
-                  specialCharacter=true;
               }else if(isNumber(password[cont])){
                   number=true;
               }
               cont++;
           }
-          if(!(lowLetter==false || upLetter==false || specialCharacter==false || number==false)){
+          if(!(lowLetter==false || upLetter==false ||  number==false)){
               return true;
           }
           return false;

@@ -439,8 +439,88 @@ function validatePassword(password){
       }
     }
   };
+ var button = document.getElementById("continue");
+  button.addEventListener("click", function (event) {
+    urlSignUp =
+    "name=" +
+    nameInput.value +
+    "&lastName=" +
+    surnameInput.value +
+    "&dni=" +
+    idInput.value +
+    "&dob=" +
+    birthdayInput.value +
+    "&phone=" +
+    phoneInput.value +
+    "&address=" +
+    addressInput.value +
+    "&zip=" +
+    zipInput.value +
+    "&city=" +
+    cityInput.value +
+    "&email=" +
+    emailInput.value +
+    "&password=" +
+    passwordInput.value +
+    "&password=" +
+    passwordRepeatInput.value +
+    event.preventDefault();
+    if(
+      nameValidation(nameInput.value) &&
+      nameValidation(surnameInput.value) &&
+      validateEmail(emailInput.value) &&
+      validateDate(birthdayInput.value) &&
+      validatePhone(passwordInput.value) &&
+      validateAddress(addressInput.value) &&
+      validateZip(zipInput.value) &&
+      validateCity(cityInput.value) &&
+      validateEmail(emailInput.value) &&
+      validatePassword(passwordInput.value) &&
+      matchPassword(passwordRepeatInput.value)
+){
+  fetch(urlSignUp)
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (data) {
+      if (data.hasOwnProperty("data")) {
+        var keys = Object.keys(data.data);
+        for (var i = 1; i < keys.length; i++) {
+          var key = keys[i];
+          if (data.data.hasOwnProperty(key)) {
+            var value = data.data[key];
+            localStorage.setItem(key, value);
+            alert(key + ": " + value);
+          }
+        }
+      } else if (data.hasOwnProperty("errors")) {
+        for (var i = 0; i < data.errors.length; i++) {
+          var error = data.errors[i];
+          if (error.hasOwnProperty("msg")) {
+            alert(error.msg);
+          }
+        }
+      }
+    });
+  }
+});
+document.addEventListener("DOMContentLoaded", ReloadInfo());
+function ReloadInfo() {
+  nameInput.value = localStorage.getItem("name");
+  surnameInput.value = localStorage.getItem("lastName");
+  addressInput.value = localStorage.getItem("address");
+  zipInput.value = localStorage.getItem("zip");
+  birthdayInput.value = localStorage.getItem("dob");
+  phoneInput.value = localStorage.getItem("phone");
+  idInput.value = localStorage.getItem("dni");
+  cityInput.value = localStorage.getItem("city");
+  emailInput.value = localStorage.getItem("email");
+  passwordInput.value = localStorage.getItem("password");
+  passwordRepeatInput.value = localStorage.getItem("password");
+}
 
-  
+
+
   
 
 
